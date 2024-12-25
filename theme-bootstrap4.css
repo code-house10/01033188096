@@ -5,6 +5,8 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+ @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap');
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -32,7 +34,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Cairo, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -56,7 +58,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Cairo, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -66,7 +68,7 @@ body {
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
-  outline: 0 !important;
+  outline: 0 !'Cairo', sans-serif;
 }
 
 hr {
@@ -88,9 +90,9 @@ p {
 
 abbr[title],
 abbr[data-original-title] {
-  text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: none;
+  -webkit-text-decoration: none dotted;
+          text-decoration: none dotted;
   cursor: help;
   border-bottom: 0;
   text-decoration-skip-ink: none;
@@ -162,7 +164,7 @@ a {
 
 a:hover {
   color: #0056b3;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a:not([href]):not([class]) {
@@ -353,7 +355,7 @@ template {
 }
 
 [hidden] {
-  display: none !important;
+  display: none !'Cairo', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -2711,7 +2713,7 @@ textarea.form-control,
 .wpcf7 select.is-valid,
 .wpcf7 textarea.is-valid, .wpcf7 .is-valid.wpcf7-validation-errors {
   border-color: #28a745;
-  padding-right: calc(1.5em + 0.75rem) !important;
+  padding-right: calc(1.5em + 0.75rem) !'Cairo', sans-serif;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: right calc(0.375em + 0.1875rem) center;
@@ -2761,7 +2763,7 @@ textarea.form-control,
 .was-validated select.form-control:valid,
 .was-validated .wpcf7 select:valid, .wpcf7 .was-validated select:valid, select.form-control.is-valid,
 .wpcf7 select.is-valid {
-  padding-right: 3rem !important;
+  padding-right: 3rem !'Cairo', sans-serif;
   background-position: right 1.5rem center;
 }
 
@@ -2774,7 +2776,7 @@ textarea.form-control,
 
 .was-validated .custom-select:valid, .custom-select.is-valid {
   border-color: #28a745;
-  padding-right: calc(0.75em + 2.3125rem) !important;
+  padding-right: calc(0.75em + 2.3125rem) !'Cairo', sans-serif;
   background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") right 0.75rem center/8px 10px no-repeat, #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") center right 1.75rem/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem) no-repeat;
 }
 
@@ -2898,7 +2900,7 @@ textarea.form-control,
 .wpcf7 select.is-invalid,
 .wpcf7 textarea.is-invalid, .wpcf7 .is-invalid.wpcf7-validation-errors {
   border-color: #dc3545;
-  padding-right: calc(1.5em + 0.75rem) !important;
+  padding-right: calc(1.5em + 0.75rem) !'Cairo', sans-serif;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: right calc(0.375em + 0.1875rem) center;
@@ -2948,7 +2950,7 @@ textarea.form-control,
 .was-validated select.form-control:invalid,
 .was-validated .wpcf7 select:invalid, .wpcf7 .was-validated select:invalid, select.form-control.is-invalid,
 .wpcf7 select.is-invalid {
-  padding-right: 3rem !important;
+  padding-right: 3rem !'Cairo', sans-serif;
   background-position: right 1.5rem center;
 }
 
@@ -2961,7 +2963,7 @@ textarea.form-control,
 
 .was-validated .custom-select:invalid, .custom-select.is-invalid {
   border-color: #dc3545;
-  padding-right: calc(0.75em + 2.3125rem) !important;
+  padding-right: calc(0.75em + 2.3125rem) !'Cairo', sans-serif;
   background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") right 0.75rem center/8px 10px no-repeat, #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e") center right 1.75rem/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem) no-repeat;
 }
 
@@ -3776,11 +3778,11 @@ fieldset:disabled a.btn {
 
 .btn-link:hover {
   color: #0056b3;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .btn-link:focus, .btn-link.focus {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .btn-link:disabled, .btn-link.disabled {
@@ -5844,9 +5846,9 @@ input[type="button"].btn-block {
     overflow: visible;
   }
   .navbar-expand-sm .navbar-collapse {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
+    display: -webkit-box !'Cairo', sans-serif;
+    display: -ms-flexbox !'Cairo', sans-serif;
+    display: flex !'Cairo', sans-serif;
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
   }
@@ -5895,9 +5897,9 @@ input[type="button"].btn-block {
     overflow: visible;
   }
   .navbar-expand-md .navbar-collapse {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
+    display: -webkit-box !'Cairo', sans-serif;
+    display: -ms-flexbox !'Cairo', sans-serif;
+    display: flex !'Cairo', sans-serif;
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
   }
@@ -5946,9 +5948,9 @@ input[type="button"].btn-block {
     overflow: visible;
   }
   .navbar-expand-lg .navbar-collapse {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
+    display: -webkit-box !'Cairo', sans-serif;
+    display: -ms-flexbox !'Cairo', sans-serif;
+    display: flex !'Cairo', sans-serif;
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
   }
@@ -5997,9 +5999,9 @@ input[type="button"].btn-block {
     overflow: visible;
   }
   .navbar-expand-xl .navbar-collapse {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
+    display: -webkit-box !'Cairo', sans-serif;
+    display: -ms-flexbox !'Cairo', sans-serif;
+    display: flex !'Cairo', sans-serif;
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
   }
@@ -6051,9 +6053,9 @@ input[type="button"].btn-block {
 }
 
 .navbar-expand .navbar-collapse {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
+  display: -webkit-box !'Cairo', sans-serif;
+  display: -ms-flexbox !'Cairo', sans-serif;
+  display: flex !'Cairo', sans-serif;
   -ms-flex-preferred-size: auto;
       flex-basis: auto;
 }
@@ -6438,7 +6440,7 @@ input[type="button"].btn-block {
 }
 
 .breadcrumb-item + .breadcrumb-item:hover::before {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .breadcrumb-item + .breadcrumb-item:hover::before {
@@ -7652,7 +7654,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Cairo, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -7765,7 +7767,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Cairo, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -8221,235 +8223,235 @@ a.close.disabled {
 }
 
 .align-baseline {
-  vertical-align: baseline !important;
+  vertical-align: baseline !'Cairo', sans-serif;
 }
 
 .align-top {
-  vertical-align: top !important;
+  vertical-align: top !'Cairo', sans-serif;
 }
 
 .align-middle {
-  vertical-align: middle !important;
+  vertical-align: middle !'Cairo', sans-serif;
 }
 
 .align-bottom {
-  vertical-align: bottom !important;
+  vertical-align: bottom !'Cairo', sans-serif;
 }
 
 .align-text-bottom {
-  vertical-align: text-bottom !important;
+  vertical-align: text-bottom !'Cairo', sans-serif;
 }
 
 .align-text-top {
-  vertical-align: text-top !important;
+  vertical-align: text-top !'Cairo', sans-serif;
 }
 
 .bg-primary {
-  background-color: #007bff !important;
+  background-color: #007bff !'Cairo', sans-serif;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,
 button.bg-primary:focus {
-  background-color: #0062cc !important;
+  background-color: #0062cc !'Cairo', sans-serif;
 }
 
 .bg-secondary {
-  background-color: #6c757d !important;
+  background-color: #6c757d !'Cairo', sans-serif;
 }
 
 a.bg-secondary:hover, a.bg-secondary:focus,
 button.bg-secondary:hover,
 button.bg-secondary:focus {
-  background-color: #545b62 !important;
+  background-color: #545b62 !'Cairo', sans-serif;
 }
 
 .bg-success {
-  background-color: #28a745 !important;
+  background-color: #28a745 !'Cairo', sans-serif;
 }
 
 a.bg-success:hover, a.bg-success:focus,
 button.bg-success:hover,
 button.bg-success:focus {
-  background-color: #1e7e34 !important;
+  background-color: #1e7e34 !'Cairo', sans-serif;
 }
 
 .bg-info {
-  background-color: #17a2b8 !important;
+  background-color: #17a2b8 !'Cairo', sans-serif;
 }
 
 a.bg-info:hover, a.bg-info:focus,
 button.bg-info:hover,
 button.bg-info:focus {
-  background-color: #117a8b !important;
+  background-color: #117a8b !'Cairo', sans-serif;
 }
 
 .bg-warning {
-  background-color: #ffc107 !important;
+  background-color: #ffc107 !'Cairo', sans-serif;
 }
 
 a.bg-warning:hover, a.bg-warning:focus,
 button.bg-warning:hover,
 button.bg-warning:focus {
-  background-color: #d39e00 !important;
+  background-color: #d39e00 !'Cairo', sans-serif;
 }
 
 .bg-danger {
-  background-color: #dc3545 !important;
+  background-color: #dc3545 !'Cairo', sans-serif;
 }
 
 a.bg-danger:hover, a.bg-danger:focus,
 button.bg-danger:hover,
 button.bg-danger:focus {
-  background-color: #bd2130 !important;
+  background-color: #bd2130 !'Cairo', sans-serif;
 }
 
 .bg-light {
-  background-color: #f8f9fa !important;
+  background-color: #f8f9fa !'Cairo', sans-serif;
 }
 
 a.bg-light:hover, a.bg-light:focus,
 button.bg-light:hover,
 button.bg-light:focus {
-  background-color: #dae0e5 !important;
+  background-color: #dae0e5 !'Cairo', sans-serif;
 }
 
 .bg-dark {
-  background-color: #343a40 !important;
+  background-color: #343a40 !'Cairo', sans-serif;
 }
 
 a.bg-dark:hover, a.bg-dark:focus,
 button.bg-dark:hover,
 button.bg-dark:focus {
-  background-color: #1d2124 !important;
+  background-color: #1d2124 !'Cairo', sans-serif;
 }
 
 .bg-white {
-  background-color: #fff !important;
+  background-color: #fff !'Cairo', sans-serif;
 }
 
 .bg-transparent {
-  background-color: transparent !important;
+  background-color: transparent !'Cairo', sans-serif;
 }
 
 .border {
-  border: 1px solid #dee2e6 !important;
+  border: 1px solid #dee2e6 !'Cairo', sans-serif;
 }
 
 .border-top {
-  border-top: 1px solid #dee2e6 !important;
+  border-top: 1px solid #dee2e6 !'Cairo', sans-serif;
 }
 
 .border-right {
-  border-right: 1px solid #dee2e6 !important;
+  border-right: 1px solid #dee2e6 !'Cairo', sans-serif;
 }
 
 .border-bottom {
-  border-bottom: 1px solid #dee2e6 !important;
+  border-bottom: 1px solid #dee2e6 !'Cairo', sans-serif;
 }
 
 .border-left {
-  border-left: 1px solid #dee2e6 !important;
+  border-left: 1px solid #dee2e6 !'Cairo', sans-serif;
 }
 
 .border-0 {
-  border: 0 !important;
+  border: 0 !'Cairo', sans-serif;
 }
 
 .border-top-0 {
-  border-top: 0 !important;
+  border-top: 0 !'Cairo', sans-serif;
 }
 
 .border-right-0 {
-  border-right: 0 !important;
+  border-right: 0 !'Cairo', sans-serif;
 }
 
 .border-bottom-0 {
-  border-bottom: 0 !important;
+  border-bottom: 0 !'Cairo', sans-serif;
 }
 
 .border-left-0 {
-  border-left: 0 !important;
+  border-left: 0 !'Cairo', sans-serif;
 }
 
 .border-primary {
-  border-color: #007bff !important;
+  border-color: #007bff !'Cairo', sans-serif;
 }
 
 .border-secondary {
-  border-color: #6c757d !important;
+  border-color: #6c757d !'Cairo', sans-serif;
 }
 
 .border-success {
-  border-color: #28a745 !important;
+  border-color: #28a745 !'Cairo', sans-serif;
 }
 
 .border-info {
-  border-color: #17a2b8 !important;
+  border-color: #17a2b8 !'Cairo', sans-serif;
 }
 
 .border-warning {
-  border-color: #ffc107 !important;
+  border-color: #ffc107 !'Cairo', sans-serif;
 }
 
 .border-danger {
-  border-color: #dc3545 !important;
+  border-color: #dc3545 !'Cairo', sans-serif;
 }
 
 .border-light {
-  border-color: #f8f9fa !important;
+  border-color: #f8f9fa !'Cairo', sans-serif;
 }
 
 .border-dark {
-  border-color: #343a40 !important;
+  border-color: #343a40 !'Cairo', sans-serif;
 }
 
 .border-white {
-  border-color: #fff !important;
+  border-color: #fff !'Cairo', sans-serif;
 }
 
 .rounded-sm {
-  border-radius: 0.2rem !important;
+  border-radius: 0.2rem !'Cairo', sans-serif;
 }
 
 .rounded {
-  border-radius: 0.25rem !important;
+  border-radius: 0.25rem !'Cairo', sans-serif;
 }
 
 .rounded-top {
-  border-top-left-radius: 0.25rem !important;
-  border-top-right-radius: 0.25rem !important;
+  border-top-left-radius: 0.25rem !'Cairo', sans-serif;
+  border-top-right-radius: 0.25rem !'Cairo', sans-serif;
 }
 
 .rounded-right {
-  border-top-right-radius: 0.25rem !important;
-  border-bottom-right-radius: 0.25rem !important;
+  border-top-right-radius: 0.25rem !'Cairo', sans-serif;
+  border-bottom-right-radius: 0.25rem !'Cairo', sans-serif;
 }
 
 .rounded-bottom {
-  border-bottom-right-radius: 0.25rem !important;
-  border-bottom-left-radius: 0.25rem !important;
+  border-bottom-right-radius: 0.25rem !'Cairo', sans-serif;
+  border-bottom-left-radius: 0.25rem !'Cairo', sans-serif;
 }
 
 .rounded-left {
-  border-top-left-radius: 0.25rem !important;
-  border-bottom-left-radius: 0.25rem !important;
+  border-top-left-radius: 0.25rem !'Cairo', sans-serif;
+  border-bottom-left-radius: 0.25rem !'Cairo', sans-serif;
 }
 
 .rounded-lg {
-  border-radius: 0.3rem !important;
+  border-radius: 0.3rem !'Cairo', sans-serif;
 }
 
 .rounded-circle {
-  border-radius: 50% !important;
+  border-radius: 50% !'Cairo', sans-serif;
 }
 
 .rounded-pill {
-  border-radius: 50rem !important;
+  border-radius: 50rem !'Cairo', sans-serif;
 }
 
 .rounded-0 {
-  border-radius: 0 !important;
+  border-radius: 0 !'Cairo', sans-serif;
 }
 
 .clearfix::after {
@@ -8459,212 +8461,212 @@ button.bg-dark:focus {
 }
 
 .d-none {
-  display: none !important;
+  display: none !'Cairo', sans-serif;
 }
 
 .d-inline {
-  display: inline !important;
+  display: inline !'Cairo', sans-serif;
 }
 
 .d-inline-block {
-  display: inline-block !important;
+  display: inline-block !'Cairo', sans-serif;
 }
 
 .d-block {
-  display: block !important;
+  display: block !'Cairo', sans-serif;
 }
 
 .d-table {
-  display: table !important;
+  display: table !'Cairo', sans-serif;
 }
 
 .d-table-row {
-  display: table-row !important;
+  display: table-row !'Cairo', sans-serif;
 }
 
 .d-table-cell {
-  display: table-cell !important;
+  display: table-cell !'Cairo', sans-serif;
 }
 
 .d-flex {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
+  display: -webkit-box !'Cairo', sans-serif;
+  display: -ms-flexbox !'Cairo', sans-serif;
+  display: flex !'Cairo', sans-serif;
 }
 
 .d-inline-flex {
-  display: -webkit-inline-box !important;
-  display: -ms-inline-flexbox !important;
-  display: inline-flex !important;
+  display: -webkit-inline-box !'Cairo', sans-serif;
+  display: -ms-inline-flexbox !'Cairo', sans-serif;
+  display: inline-flex !'Cairo', sans-serif;
 }
 
 @media (min-width: 576px) {
   .d-sm-none {
-    display: none !important;
+    display: none !'Cairo', sans-serif;
   }
   .d-sm-inline {
-    display: inline !important;
+    display: inline !'Cairo', sans-serif;
   }
   .d-sm-inline-block {
-    display: inline-block !important;
+    display: inline-block !'Cairo', sans-serif;
   }
   .d-sm-block {
-    display: block !important;
+    display: block !'Cairo', sans-serif;
   }
   .d-sm-table {
-    display: table !important;
+    display: table !'Cairo', sans-serif;
   }
   .d-sm-table-row {
-    display: table-row !important;
+    display: table-row !'Cairo', sans-serif;
   }
   .d-sm-table-cell {
-    display: table-cell !important;
+    display: table-cell !'Cairo', sans-serif;
   }
   .d-sm-flex {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
+    display: -webkit-box !'Cairo', sans-serif;
+    display: -ms-flexbox !'Cairo', sans-serif;
+    display: flex !'Cairo', sans-serif;
   }
   .d-sm-inline-flex {
-    display: -webkit-inline-box !important;
-    display: -ms-inline-flexbox !important;
-    display: inline-flex !important;
+    display: -webkit-inline-box !'Cairo', sans-serif;
+    display: -ms-inline-flexbox !'Cairo', sans-serif;
+    display: inline-flex !'Cairo', sans-serif;
   }
 }
 
 @media (min-width: 768px) {
   .d-md-none {
-    display: none !important;
+    display: none !'Cairo', sans-serif;
   }
   .d-md-inline {
-    display: inline !important;
+    display: inline !'Cairo', sans-serif;
   }
   .d-md-inline-block {
-    display: inline-block !important;
+    display: inline-block !'Cairo', sans-serif;
   }
   .d-md-block {
-    display: block !important;
+    display: block !'Cairo', sans-serif;
   }
   .d-md-table {
-    display: table !important;
+    display: table !'Cairo', sans-serif;
   }
   .d-md-table-row {
-    display: table-row !important;
+    display: table-row !'Cairo', sans-serif;
   }
   .d-md-table-cell {
-    display: table-cell !important;
+    display: table-cell !'Cairo', sans-serif;
   }
   .d-md-flex {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
+    display: -webkit-box !'Cairo', sans-serif;
+    display: -ms-flexbox !'Cairo', sans-serif;
+    display: flex !'Cairo', sans-serif;
   }
   .d-md-inline-flex {
-    display: -webkit-inline-box !important;
-    display: -ms-inline-flexbox !important;
-    display: inline-flex !important;
+    display: -webkit-inline-box !'Cairo', sans-serif;
+    display: -ms-inline-flexbox !'Cairo', sans-serif;
+    display: inline-flex !'Cairo', sans-serif;
   }
 }
 
 @media (min-width: 992px) {
   .d-lg-none {
-    display: none !important;
+    display: none !'Cairo', sans-serif;
   }
   .d-lg-inline {
-    display: inline !important;
+    display: inline !'Cairo', sans-serif;
   }
   .d-lg-inline-block {
-    display: inline-block !important;
+    display: inline-block !'Cairo', sans-serif;
   }
   .d-lg-block {
-    display: block !important;
+    display: block !'Cairo', sans-serif;
   }
   .d-lg-table {
-    display: table !important;
+    display: table !'Cairo', sans-serif;
   }
   .d-lg-table-row {
-    display: table-row !important;
+    display: table-row !'Cairo', sans-serif;
   }
   .d-lg-table-cell {
-    display: table-cell !important;
+    display: table-cell !'Cairo', sans-serif;
   }
   .d-lg-flex {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
+    display: -webkit-box !'Cairo', sans-serif;
+    display: -ms-flexbox !'Cairo', sans-serif;
+    display: flex !'Cairo', sans-serif;
   }
   .d-lg-inline-flex {
-    display: -webkit-inline-box !important;
-    display: -ms-inline-flexbox !important;
-    display: inline-flex !important;
+    display: -webkit-inline-box !'Cairo', sans-serif;
+    display: -ms-inline-flexbox !'Cairo', sans-serif;
+    display: inline-flex !'Cairo', sans-serif;
   }
 }
 
 @media (min-width: 1200px) {
   .d-xl-none {
-    display: none !important;
+    display: none !'Cairo', sans-serif;
   }
   .d-xl-inline {
-    display: inline !important;
+    display: inline !'Cairo', sans-serif;
   }
   .d-xl-inline-block {
-    display: inline-block !important;
+    display: inline-block !'Cairo', sans-serif;
   }
   .d-xl-block {
-    display: block !important;
+    display: block !'Cairo', sans-serif;
   }
   .d-xl-table {
-    display: table !important;
+    display: table !'Cairo', sans-serif;
   }
   .d-xl-table-row {
-    display: table-row !important;
+    display: table-row !'Cairo', sans-serif;
   }
   .d-xl-table-cell {
-    display: table-cell !important;
+    display: table-cell !'Cairo', sans-serif;
   }
   .d-xl-flex {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
+    display: -webkit-box !'Cairo', sans-serif;
+    display: -ms-flexbox !'Cairo', sans-serif;
+    display: flex !'Cairo', sans-serif;
   }
   .d-xl-inline-flex {
-    display: -webkit-inline-box !important;
-    display: -ms-inline-flexbox !important;
-    display: inline-flex !important;
+    display: -webkit-inline-box !'Cairo', sans-serif;
+    display: -ms-inline-flexbox !'Cairo', sans-serif;
+    display: inline-flex !'Cairo', sans-serif;
   }
 }
 
 @media print {
   .d-print-none {
-    display: none !important;
+    display: none !'Cairo', sans-serif;
   }
   .d-print-inline {
-    display: inline !important;
+    display: inline !'Cairo', sans-serif;
   }
   .d-print-inline-block {
-    display: inline-block !important;
+    display: inline-block !'Cairo', sans-serif;
   }
   .d-print-block {
-    display: block !important;
+    display: block !'Cairo', sans-serif;
   }
   .d-print-table {
-    display: table !important;
+    display: table !'Cairo', sans-serif;
   }
   .d-print-table-row {
-    display: table-row !important;
+    display: table-row !'Cairo', sans-serif;
   }
   .d-print-table-cell {
-    display: table-cell !important;
+    display: table-cell !'Cairo', sans-serif;
   }
   .d-print-flex {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
+    display: -webkit-box !'Cairo', sans-serif;
+    display: -ms-flexbox !'Cairo', sans-serif;
+    display: flex !'Cairo', sans-serif;
   }
   .d-print-inline-flex {
-    display: -webkit-inline-box !important;
-    display: -ms-inline-flexbox !important;
-    display: inline-flex !important;
+    display: -webkit-inline-box !'Cairo', sans-serif;
+    display: -ms-inline-flexbox !'Cairo', sans-serif;
+    display: inline-flex !'Cairo', sans-serif;
   }
 }
 
@@ -8712,954 +8714,954 @@ button.bg-dark:focus {
 }
 
 .flex-row {
-  -webkit-box-orient: horizontal !important;
-  -webkit-box-direction: normal !important;
-      -ms-flex-direction: row !important;
-          flex-direction: row !important;
+  -webkit-box-orient: horizontal !'Cairo', sans-serif;
+  -webkit-box-direction: normal !'Cairo', sans-serif;
+      -ms-flex-direction: row !'Cairo', sans-serif;
+          flex-direction: row !'Cairo', sans-serif;
 }
 
 .flex-column {
-  -webkit-box-orient: vertical !important;
-  -webkit-box-direction: normal !important;
-      -ms-flex-direction: column !important;
-          flex-direction: column !important;
+  -webkit-box-orient: vertical !'Cairo', sans-serif;
+  -webkit-box-direction: normal !'Cairo', sans-serif;
+      -ms-flex-direction: column !'Cairo', sans-serif;
+          flex-direction: column !'Cairo', sans-serif;
 }
 
 .flex-row-reverse {
-  -webkit-box-orient: horizontal !important;
-  -webkit-box-direction: reverse !important;
-      -ms-flex-direction: row-reverse !important;
-          flex-direction: row-reverse !important;
+  -webkit-box-orient: horizontal !'Cairo', sans-serif;
+  -webkit-box-direction: reverse !'Cairo', sans-serif;
+      -ms-flex-direction: row-reverse !'Cairo', sans-serif;
+          flex-direction: row-reverse !'Cairo', sans-serif;
 }
 
 .flex-column-reverse {
-  -webkit-box-orient: vertical !important;
-  -webkit-box-direction: reverse !important;
-      -ms-flex-direction: column-reverse !important;
-          flex-direction: column-reverse !important;
+  -webkit-box-orient: vertical !'Cairo', sans-serif;
+  -webkit-box-direction: reverse !'Cairo', sans-serif;
+      -ms-flex-direction: column-reverse !'Cairo', sans-serif;
+          flex-direction: column-reverse !'Cairo', sans-serif;
 }
 
 .flex-wrap {
-  -ms-flex-wrap: wrap !important;
-      flex-wrap: wrap !important;
+  -ms-flex-wrap: wrap !'Cairo', sans-serif;
+      flex-wrap: wrap !'Cairo', sans-serif;
 }
 
 .flex-nowrap {
-  -ms-flex-wrap: nowrap !important;
-      flex-wrap: nowrap !important;
+  -ms-flex-wrap: nowrap !'Cairo', sans-serif;
+      flex-wrap: nowrap !'Cairo', sans-serif;
 }
 
 .flex-wrap-reverse {
-  -ms-flex-wrap: wrap-reverse !important;
-      flex-wrap: wrap-reverse !important;
+  -ms-flex-wrap: wrap-reverse !'Cairo', sans-serif;
+      flex-wrap: wrap-reverse !'Cairo', sans-serif;
 }
 
 .flex-fill {
-  -webkit-box-flex: 1 !important;
-      -ms-flex: 1 1 auto !important;
-          flex: 1 1 auto !important;
+  -webkit-box-flex: 1 !'Cairo', sans-serif;
+      -ms-flex: 1 1 auto !'Cairo', sans-serif;
+          flex: 1 1 auto !'Cairo', sans-serif;
 }
 
 .flex-grow-0 {
-  -webkit-box-flex: 0 !important;
-      -ms-flex-positive: 0 !important;
-          flex-grow: 0 !important;
+  -webkit-box-flex: 0 !'Cairo', sans-serif;
+      -ms-flex-positive: 0 !'Cairo', sans-serif;
+          flex-grow: 0 !'Cairo', sans-serif;
 }
 
 .flex-grow-1 {
-  -webkit-box-flex: 1 !important;
-      -ms-flex-positive: 1 !important;
-          flex-grow: 1 !important;
+  -webkit-box-flex: 1 !'Cairo', sans-serif;
+      -ms-flex-positive: 1 !'Cairo', sans-serif;
+          flex-grow: 1 !'Cairo', sans-serif;
 }
 
 .flex-shrink-0 {
-  -ms-flex-negative: 0 !important;
-      flex-shrink: 0 !important;
+  -ms-flex-negative: 0 !'Cairo', sans-serif;
+      flex-shrink: 0 !'Cairo', sans-serif;
 }
 
 .flex-shrink-1 {
-  -ms-flex-negative: 1 !important;
-      flex-shrink: 1 !important;
+  -ms-flex-negative: 1 !'Cairo', sans-serif;
+      flex-shrink: 1 !'Cairo', sans-serif;
 }
 
 .justify-content-start {
-  -webkit-box-pack: start !important;
-      -ms-flex-pack: start !important;
-          justify-content: flex-start !important;
+  -webkit-box-pack: start !'Cairo', sans-serif;
+      -ms-flex-pack: start !'Cairo', sans-serif;
+          justify-content: flex-start !'Cairo', sans-serif;
 }
 
 .justify-content-end {
-  -webkit-box-pack: end !important;
-      -ms-flex-pack: end !important;
-          justify-content: flex-end !important;
+  -webkit-box-pack: end !'Cairo', sans-serif;
+      -ms-flex-pack: end !'Cairo', sans-serif;
+          justify-content: flex-end !'Cairo', sans-serif;
 }
 
 .justify-content-center {
-  -webkit-box-pack: center !important;
-      -ms-flex-pack: center !important;
-          justify-content: center !important;
+  -webkit-box-pack: center !'Cairo', sans-serif;
+      -ms-flex-pack: center !'Cairo', sans-serif;
+          justify-content: center !'Cairo', sans-serif;
 }
 
 .justify-content-between {
-  -webkit-box-pack: justify !important;
-      -ms-flex-pack: justify !important;
-          justify-content: space-between !important;
+  -webkit-box-pack: justify !'Cairo', sans-serif;
+      -ms-flex-pack: justify !'Cairo', sans-serif;
+          justify-content: space-between !'Cairo', sans-serif;
 }
 
 .justify-content-around {
-  -ms-flex-pack: distribute !important;
-      justify-content: space-around !important;
+  -ms-flex-pack: distribute !'Cairo', sans-serif;
+      justify-content: space-around !'Cairo', sans-serif;
 }
 
 .align-items-start {
-  -webkit-box-align: start !important;
-      -ms-flex-align: start !important;
-          align-items: flex-start !important;
+  -webkit-box-align: start !'Cairo', sans-serif;
+      -ms-flex-align: start !'Cairo', sans-serif;
+          align-items: flex-start !'Cairo', sans-serif;
 }
 
 .align-items-end {
-  -webkit-box-align: end !important;
-      -ms-flex-align: end !important;
-          align-items: flex-end !important;
+  -webkit-box-align: end !'Cairo', sans-serif;
+      -ms-flex-align: end !'Cairo', sans-serif;
+          align-items: flex-end !'Cairo', sans-serif;
 }
 
 .align-items-center {
-  -webkit-box-align: center !important;
-      -ms-flex-align: center !important;
-          align-items: center !important;
+  -webkit-box-align: center !'Cairo', sans-serif;
+      -ms-flex-align: center !'Cairo', sans-serif;
+          align-items: center !'Cairo', sans-serif;
 }
 
 .align-items-baseline {
-  -webkit-box-align: baseline !important;
-      -ms-flex-align: baseline !important;
-          align-items: baseline !important;
+  -webkit-box-align: baseline !'Cairo', sans-serif;
+      -ms-flex-align: baseline !'Cairo', sans-serif;
+          align-items: baseline !'Cairo', sans-serif;
 }
 
 .align-items-stretch {
-  -webkit-box-align: stretch !important;
-      -ms-flex-align: stretch !important;
-          align-items: stretch !important;
+  -webkit-box-align: stretch !'Cairo', sans-serif;
+      -ms-flex-align: stretch !'Cairo', sans-serif;
+          align-items: stretch !'Cairo', sans-serif;
 }
 
 .align-content-start {
-  -ms-flex-line-pack: start !important;
-      align-content: flex-start !important;
+  -ms-flex-line-pack: start !'Cairo', sans-serif;
+      align-content: flex-start !'Cairo', sans-serif;
 }
 
 .align-content-end {
-  -ms-flex-line-pack: end !important;
-      align-content: flex-end !important;
+  -ms-flex-line-pack: end !'Cairo', sans-serif;
+      align-content: flex-end !'Cairo', sans-serif;
 }
 
 .align-content-center {
-  -ms-flex-line-pack: center !important;
-      align-content: center !important;
+  -ms-flex-line-pack: center !'Cairo', sans-serif;
+      align-content: center !'Cairo', sans-serif;
 }
 
 .align-content-between {
-  -ms-flex-line-pack: justify !important;
-      align-content: space-between !important;
+  -ms-flex-line-pack: justify !'Cairo', sans-serif;
+      align-content: space-between !'Cairo', sans-serif;
 }
 
 .align-content-around {
-  -ms-flex-line-pack: distribute !important;
-      align-content: space-around !important;
+  -ms-flex-line-pack: distribute !'Cairo', sans-serif;
+      align-content: space-around !'Cairo', sans-serif;
 }
 
 .align-content-stretch {
-  -ms-flex-line-pack: stretch !important;
-      align-content: stretch !important;
+  -ms-flex-line-pack: stretch !'Cairo', sans-serif;
+      align-content: stretch !'Cairo', sans-serif;
 }
 
 .align-self-auto {
-  -ms-flex-item-align: auto !important;
-      -ms-grid-row-align: auto !important;
-      align-self: auto !important;
+  -ms-flex-item-align: auto !'Cairo', sans-serif;
+      -ms-grid-row-align: auto !'Cairo', sans-serif;
+      align-self: auto !'Cairo', sans-serif;
 }
 
 .align-self-start {
-  -ms-flex-item-align: start !important;
-      align-self: flex-start !important;
+  -ms-flex-item-align: start !'Cairo', sans-serif;
+      align-self: flex-start !'Cairo', sans-serif;
 }
 
 .align-self-end {
-  -ms-flex-item-align: end !important;
-      align-self: flex-end !important;
+  -ms-flex-item-align: end !'Cairo', sans-serif;
+      align-self: flex-end !'Cairo', sans-serif;
 }
 
 .align-self-center {
-  -ms-flex-item-align: center !important;
-      -ms-grid-row-align: center !important;
-      align-self: center !important;
+  -ms-flex-item-align: center !'Cairo', sans-serif;
+      -ms-grid-row-align: center !'Cairo', sans-serif;
+      align-self: center !'Cairo', sans-serif;
 }
 
 .align-self-baseline {
-  -ms-flex-item-align: baseline !important;
-      align-self: baseline !important;
+  -ms-flex-item-align: baseline !'Cairo', sans-serif;
+      align-self: baseline !'Cairo', sans-serif;
 }
 
 .align-self-stretch {
-  -ms-flex-item-align: stretch !important;
-      -ms-grid-row-align: stretch !important;
-      align-self: stretch !important;
+  -ms-flex-item-align: stretch !'Cairo', sans-serif;
+      -ms-grid-row-align: stretch !'Cairo', sans-serif;
+      align-self: stretch !'Cairo', sans-serif;
 }
 
 @media (min-width: 576px) {
   .flex-sm-row {
-    -webkit-box-orient: horizontal !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: row !important;
-            flex-direction: row !important;
+    -webkit-box-orient: horizontal !'Cairo', sans-serif;
+    -webkit-box-direction: normal !'Cairo', sans-serif;
+        -ms-flex-direction: row !'Cairo', sans-serif;
+            flex-direction: row !'Cairo', sans-serif;
   }
   .flex-sm-column {
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
+    -webkit-box-orient: vertical !'Cairo', sans-serif;
+    -webkit-box-direction: normal !'Cairo', sans-serif;
+        -ms-flex-direction: column !'Cairo', sans-serif;
+            flex-direction: column !'Cairo', sans-serif;
   }
   .flex-sm-row-reverse {
-    -webkit-box-orient: horizontal !important;
-    -webkit-box-direction: reverse !important;
-        -ms-flex-direction: row-reverse !important;
-            flex-direction: row-reverse !important;
+    -webkit-box-orient: horizontal !'Cairo', sans-serif;
+    -webkit-box-direction: reverse !'Cairo', sans-serif;
+        -ms-flex-direction: row-reverse !'Cairo', sans-serif;
+            flex-direction: row-reverse !'Cairo', sans-serif;
   }
   .flex-sm-column-reverse {
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: reverse !important;
-        -ms-flex-direction: column-reverse !important;
-            flex-direction: column-reverse !important;
+    -webkit-box-orient: vertical !'Cairo', sans-serif;
+    -webkit-box-direction: reverse !'Cairo', sans-serif;
+        -ms-flex-direction: column-reverse !'Cairo', sans-serif;
+            flex-direction: column-reverse !'Cairo', sans-serif;
   }
   .flex-sm-wrap {
-    -ms-flex-wrap: wrap !important;
-        flex-wrap: wrap !important;
+    -ms-flex-wrap: wrap !'Cairo', sans-serif;
+        flex-wrap: wrap !'Cairo', sans-serif;
   }
   .flex-sm-nowrap {
-    -ms-flex-wrap: nowrap !important;
-        flex-wrap: nowrap !important;
+    -ms-flex-wrap: nowrap !'Cairo', sans-serif;
+        flex-wrap: nowrap !'Cairo', sans-serif;
   }
   .flex-sm-wrap-reverse {
-    -ms-flex-wrap: wrap-reverse !important;
-        flex-wrap: wrap-reverse !important;
+    -ms-flex-wrap: wrap-reverse !'Cairo', sans-serif;
+        flex-wrap: wrap-reverse !'Cairo', sans-serif;
   }
   .flex-sm-fill {
-    -webkit-box-flex: 1 !important;
-        -ms-flex: 1 1 auto !important;
-            flex: 1 1 auto !important;
+    -webkit-box-flex: 1 !'Cairo', sans-serif;
+        -ms-flex: 1 1 auto !'Cairo', sans-serif;
+            flex: 1 1 auto !'Cairo', sans-serif;
   }
   .flex-sm-grow-0 {
-    -webkit-box-flex: 0 !important;
-        -ms-flex-positive: 0 !important;
-            flex-grow: 0 !important;
+    -webkit-box-flex: 0 !'Cairo', sans-serif;
+        -ms-flex-positive: 0 !'Cairo', sans-serif;
+            flex-grow: 0 !'Cairo', sans-serif;
   }
   .flex-sm-grow-1 {
-    -webkit-box-flex: 1 !important;
-        -ms-flex-positive: 1 !important;
-            flex-grow: 1 !important;
+    -webkit-box-flex: 1 !'Cairo', sans-serif;
+        -ms-flex-positive: 1 !'Cairo', sans-serif;
+            flex-grow: 1 !'Cairo', sans-serif;
   }
   .flex-sm-shrink-0 {
-    -ms-flex-negative: 0 !important;
-        flex-shrink: 0 !important;
+    -ms-flex-negative: 0 !'Cairo', sans-serif;
+        flex-shrink: 0 !'Cairo', sans-serif;
   }
   .flex-sm-shrink-1 {
-    -ms-flex-negative: 1 !important;
-        flex-shrink: 1 !important;
+    -ms-flex-negative: 1 !'Cairo', sans-serif;
+        flex-shrink: 1 !'Cairo', sans-serif;
   }
   .justify-content-sm-start {
-    -webkit-box-pack: start !important;
-        -ms-flex-pack: start !important;
-            justify-content: flex-start !important;
+    -webkit-box-pack: start !'Cairo', sans-serif;
+        -ms-flex-pack: start !'Cairo', sans-serif;
+            justify-content: flex-start !'Cairo', sans-serif;
   }
   .justify-content-sm-end {
-    -webkit-box-pack: end !important;
-        -ms-flex-pack: end !important;
-            justify-content: flex-end !important;
+    -webkit-box-pack: end !'Cairo', sans-serif;
+        -ms-flex-pack: end !'Cairo', sans-serif;
+            justify-content: flex-end !'Cairo', sans-serif;
   }
   .justify-content-sm-center {
-    -webkit-box-pack: center !important;
-        -ms-flex-pack: center !important;
-            justify-content: center !important;
+    -webkit-box-pack: center !'Cairo', sans-serif;
+        -ms-flex-pack: center !'Cairo', sans-serif;
+            justify-content: center !'Cairo', sans-serif;
   }
   .justify-content-sm-between {
-    -webkit-box-pack: justify !important;
-        -ms-flex-pack: justify !important;
-            justify-content: space-between !important;
+    -webkit-box-pack: justify !'Cairo', sans-serif;
+        -ms-flex-pack: justify !'Cairo', sans-serif;
+            justify-content: space-between !'Cairo', sans-serif;
   }
   .justify-content-sm-around {
-    -ms-flex-pack: distribute !important;
-        justify-content: space-around !important;
+    -ms-flex-pack: distribute !'Cairo', sans-serif;
+        justify-content: space-around !'Cairo', sans-serif;
   }
   .align-items-sm-start {
-    -webkit-box-align: start !important;
-        -ms-flex-align: start !important;
-            align-items: flex-start !important;
+    -webkit-box-align: start !'Cairo', sans-serif;
+        -ms-flex-align: start !'Cairo', sans-serif;
+            align-items: flex-start !'Cairo', sans-serif;
   }
   .align-items-sm-end {
-    -webkit-box-align: end !important;
-        -ms-flex-align: end !important;
-            align-items: flex-end !important;
+    -webkit-box-align: end !'Cairo', sans-serif;
+        -ms-flex-align: end !'Cairo', sans-serif;
+            align-items: flex-end !'Cairo', sans-serif;
   }
   .align-items-sm-center {
-    -webkit-box-align: center !important;
-        -ms-flex-align: center !important;
-            align-items: center !important;
+    -webkit-box-align: center !'Cairo', sans-serif;
+        -ms-flex-align: center !'Cairo', sans-serif;
+            align-items: center !'Cairo', sans-serif;
   }
   .align-items-sm-baseline {
-    -webkit-box-align: baseline !important;
-        -ms-flex-align: baseline !important;
-            align-items: baseline !important;
+    -webkit-box-align: baseline !'Cairo', sans-serif;
+        -ms-flex-align: baseline !'Cairo', sans-serif;
+            align-items: baseline !'Cairo', sans-serif;
   }
   .align-items-sm-stretch {
-    -webkit-box-align: stretch !important;
-        -ms-flex-align: stretch !important;
-            align-items: stretch !important;
+    -webkit-box-align: stretch !'Cairo', sans-serif;
+        -ms-flex-align: stretch !'Cairo', sans-serif;
+            align-items: stretch !'Cairo', sans-serif;
   }
   .align-content-sm-start {
-    -ms-flex-line-pack: start !important;
-        align-content: flex-start !important;
+    -ms-flex-line-pack: start !'Cairo', sans-serif;
+        align-content: flex-start !'Cairo', sans-serif;
   }
   .align-content-sm-end {
-    -ms-flex-line-pack: end !important;
-        align-content: flex-end !important;
+    -ms-flex-line-pack: end !'Cairo', sans-serif;
+        align-content: flex-end !'Cairo', sans-serif;
   }
   .align-content-sm-center {
-    -ms-flex-line-pack: center !important;
-        align-content: center !important;
+    -ms-flex-line-pack: center !'Cairo', sans-serif;
+        align-content: center !'Cairo', sans-serif;
   }
   .align-content-sm-between {
-    -ms-flex-line-pack: justify !important;
-        align-content: space-between !important;
+    -ms-flex-line-pack: justify !'Cairo', sans-serif;
+        align-content: space-between !'Cairo', sans-serif;
   }
   .align-content-sm-around {
-    -ms-flex-line-pack: distribute !important;
-        align-content: space-around !important;
+    -ms-flex-line-pack: distribute !'Cairo', sans-serif;
+        align-content: space-around !'Cairo', sans-serif;
   }
   .align-content-sm-stretch {
-    -ms-flex-line-pack: stretch !important;
-        align-content: stretch !important;
+    -ms-flex-line-pack: stretch !'Cairo', sans-serif;
+        align-content: stretch !'Cairo', sans-serif;
   }
   .align-self-sm-auto {
-    -ms-flex-item-align: auto !important;
-        -ms-grid-row-align: auto !important;
-        align-self: auto !important;
+    -ms-flex-item-align: auto !'Cairo', sans-serif;
+        -ms-grid-row-align: auto !'Cairo', sans-serif;
+        align-self: auto !'Cairo', sans-serif;
   }
   .align-self-sm-start {
-    -ms-flex-item-align: start !important;
-        align-self: flex-start !important;
+    -ms-flex-item-align: start !'Cairo', sans-serif;
+        align-self: flex-start !'Cairo', sans-serif;
   }
   .align-self-sm-end {
-    -ms-flex-item-align: end !important;
-        align-self: flex-end !important;
+    -ms-flex-item-align: end !'Cairo', sans-serif;
+        align-self: flex-end !'Cairo', sans-serif;
   }
   .align-self-sm-center {
-    -ms-flex-item-align: center !important;
-        -ms-grid-row-align: center !important;
-        align-self: center !important;
+    -ms-flex-item-align: center !'Cairo', sans-serif;
+        -ms-grid-row-align: center !'Cairo', sans-serif;
+        align-self: center !'Cairo', sans-serif;
   }
   .align-self-sm-baseline {
-    -ms-flex-item-align: baseline !important;
-        align-self: baseline !important;
+    -ms-flex-item-align: baseline !'Cairo', sans-serif;
+        align-self: baseline !'Cairo', sans-serif;
   }
   .align-self-sm-stretch {
-    -ms-flex-item-align: stretch !important;
-        -ms-grid-row-align: stretch !important;
-        align-self: stretch !important;
+    -ms-flex-item-align: stretch !'Cairo', sans-serif;
+        -ms-grid-row-align: stretch !'Cairo', sans-serif;
+        align-self: stretch !'Cairo', sans-serif;
   }
 }
 
 @media (min-width: 768px) {
   .flex-md-row {
-    -webkit-box-orient: horizontal !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: row !important;
-            flex-direction: row !important;
+    -webkit-box-orient: horizontal !'Cairo', sans-serif;
+    -webkit-box-direction: normal !'Cairo', sans-serif;
+        -ms-flex-direction: row !'Cairo', sans-serif;
+            flex-direction: row !'Cairo', sans-serif;
   }
   .flex-md-column {
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
+    -webkit-box-orient: vertical !'Cairo', sans-serif;
+    -webkit-box-direction: normal !'Cairo', sans-serif;
+        -ms-flex-direction: column !'Cairo', sans-serif;
+            flex-direction: column !'Cairo', sans-serif;
   }
   .flex-md-row-reverse {
-    -webkit-box-orient: horizontal !important;
-    -webkit-box-direction: reverse !important;
-        -ms-flex-direction: row-reverse !important;
-            flex-direction: row-reverse !important;
+    -webkit-box-orient: horizontal !'Cairo', sans-serif;
+    -webkit-box-direction: reverse !'Cairo', sans-serif;
+        -ms-flex-direction: row-reverse !'Cairo', sans-serif;
+            flex-direction: row-reverse !'Cairo', sans-serif;
   }
   .flex-md-column-reverse {
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: reverse !important;
-        -ms-flex-direction: column-reverse !important;
-            flex-direction: column-reverse !important;
+    -webkit-box-orient: vertical !'Cairo', sans-serif;
+    -webkit-box-direction: reverse !'Cairo', sans-serif;
+        -ms-flex-direction: column-reverse !'Cairo', sans-serif;
+            flex-direction: column-reverse !'Cairo', sans-serif;
   }
   .flex-md-wrap {
-    -ms-flex-wrap: wrap !important;
-        flex-wrap: wrap !important;
+    -ms-flex-wrap: wrap !'Cairo', sans-serif;
+        flex-wrap: wrap !'Cairo', sans-serif;
   }
   .flex-md-nowrap {
-    -ms-flex-wrap: nowrap !important;
-        flex-wrap: nowrap !important;
+    -ms-flex-wrap: nowrap !'Cairo', sans-serif;
+        flex-wrap: nowrap !'Cairo', sans-serif;
   }
   .flex-md-wrap-reverse {
-    -ms-flex-wrap: wrap-reverse !important;
-        flex-wrap: wrap-reverse !important;
+    -ms-flex-wrap: wrap-reverse !'Cairo', sans-serif;
+        flex-wrap: wrap-reverse !'Cairo', sans-serif;
   }
   .flex-md-fill {
-    -webkit-box-flex: 1 !important;
-        -ms-flex: 1 1 auto !important;
-            flex: 1 1 auto !important;
+    -webkit-box-flex: 1 !'Cairo', sans-serif;
+        -ms-flex: 1 1 auto !'Cairo', sans-serif;
+            flex: 1 1 auto !'Cairo', sans-serif;
   }
   .flex-md-grow-0 {
-    -webkit-box-flex: 0 !important;
-        -ms-flex-positive: 0 !important;
-            flex-grow: 0 !important;
+    -webkit-box-flex: 0 !'Cairo', sans-serif;
+        -ms-flex-positive: 0 !'Cairo', sans-serif;
+            flex-grow: 0 !'Cairo', sans-serif;
   }
   .flex-md-grow-1 {
-    -webkit-box-flex: 1 !important;
-        -ms-flex-positive: 1 !important;
-            flex-grow: 1 !important;
+    -webkit-box-flex: 1 !'Cairo', sans-serif;
+        -ms-flex-positive: 1 !'Cairo', sans-serif;
+            flex-grow: 1 !'Cairo', sans-serif;
   }
   .flex-md-shrink-0 {
-    -ms-flex-negative: 0 !important;
-        flex-shrink: 0 !important;
+    -ms-flex-negative: 0 !'Cairo', sans-serif;
+        flex-shrink: 0 !'Cairo', sans-serif;
   }
   .flex-md-shrink-1 {
-    -ms-flex-negative: 1 !important;
-        flex-shrink: 1 !important;
+    -ms-flex-negative: 1 !'Cairo', sans-serif;
+        flex-shrink: 1 !'Cairo', sans-serif;
   }
   .justify-content-md-start {
-    -webkit-box-pack: start !important;
-        -ms-flex-pack: start !important;
-            justify-content: flex-start !important;
+    -webkit-box-pack: start !'Cairo', sans-serif;
+        -ms-flex-pack: start !'Cairo', sans-serif;
+            justify-content: flex-start !'Cairo', sans-serif;
   }
   .justify-content-md-end {
-    -webkit-box-pack: end !important;
-        -ms-flex-pack: end !important;
-            justify-content: flex-end !important;
+    -webkit-box-pack: end !'Cairo', sans-serif;
+        -ms-flex-pack: end !'Cairo', sans-serif;
+            justify-content: flex-end !'Cairo', sans-serif;
   }
   .justify-content-md-center {
-    -webkit-box-pack: center !important;
-        -ms-flex-pack: center !important;
-            justify-content: center !important;
+    -webkit-box-pack: center !'Cairo', sans-serif;
+        -ms-flex-pack: center !'Cairo', sans-serif;
+            justify-content: center !'Cairo', sans-serif;
   }
   .justify-content-md-between {
-    -webkit-box-pack: justify !important;
-        -ms-flex-pack: justify !important;
-            justify-content: space-between !important;
+    -webkit-box-pack: justify !'Cairo', sans-serif;
+        -ms-flex-pack: justify !'Cairo', sans-serif;
+            justify-content: space-between !'Cairo', sans-serif;
   }
   .justify-content-md-around {
-    -ms-flex-pack: distribute !important;
-        justify-content: space-around !important;
+    -ms-flex-pack: distribute !'Cairo', sans-serif;
+        justify-content: space-around !'Cairo', sans-serif;
   }
   .align-items-md-start {
-    -webkit-box-align: start !important;
-        -ms-flex-align: start !important;
-            align-items: flex-start !important;
+    -webkit-box-align: start !'Cairo', sans-serif;
+        -ms-flex-align: start !'Cairo', sans-serif;
+            align-items: flex-start !'Cairo', sans-serif;
   }
   .align-items-md-end {
-    -webkit-box-align: end !important;
-        -ms-flex-align: end !important;
-            align-items: flex-end !important;
+    -webkit-box-align: end !'Cairo', sans-serif;
+        -ms-flex-align: end !'Cairo', sans-serif;
+            align-items: flex-end !'Cairo', sans-serif;
   }
   .align-items-md-center {
-    -webkit-box-align: center !important;
-        -ms-flex-align: center !important;
-            align-items: center !important;
+    -webkit-box-align: center !'Cairo', sans-serif;
+        -ms-flex-align: center !'Cairo', sans-serif;
+            align-items: center !'Cairo', sans-serif;
   }
   .align-items-md-baseline {
-    -webkit-box-align: baseline !important;
-        -ms-flex-align: baseline !important;
-            align-items: baseline !important;
+    -webkit-box-align: baseline !'Cairo', sans-serif;
+        -ms-flex-align: baseline !'Cairo', sans-serif;
+            align-items: baseline !'Cairo', sans-serif;
   }
   .align-items-md-stretch {
-    -webkit-box-align: stretch !important;
-        -ms-flex-align: stretch !important;
-            align-items: stretch !important;
+    -webkit-box-align: stretch !'Cairo', sans-serif;
+        -ms-flex-align: stretch !'Cairo', sans-serif;
+            align-items: stretch !'Cairo', sans-serif;
   }
   .align-content-md-start {
-    -ms-flex-line-pack: start !important;
-        align-content: flex-start !important;
+    -ms-flex-line-pack: start !'Cairo', sans-serif;
+        align-content: flex-start !'Cairo', sans-serif;
   }
   .align-content-md-end {
-    -ms-flex-line-pack: end !important;
-        align-content: flex-end !important;
+    -ms-flex-line-pack: end !'Cairo', sans-serif;
+        align-content: flex-end !'Cairo', sans-serif;
   }
   .align-content-md-center {
-    -ms-flex-line-pack: center !important;
-        align-content: center !important;
+    -ms-flex-line-pack: center !'Cairo', sans-serif;
+        align-content: center !'Cairo', sans-serif;
   }
   .align-content-md-between {
-    -ms-flex-line-pack: justify !important;
-        align-content: space-between !important;
+    -ms-flex-line-pack: justify !'Cairo', sans-serif;
+        align-content: space-between !'Cairo', sans-serif;
   }
   .align-content-md-around {
-    -ms-flex-line-pack: distribute !important;
-        align-content: space-around !important;
+    -ms-flex-line-pack: distribute !'Cairo', sans-serif;
+        align-content: space-around !'Cairo', sans-serif;
   }
   .align-content-md-stretch {
-    -ms-flex-line-pack: stretch !important;
-        align-content: stretch !important;
+    -ms-flex-line-pack: stretch !'Cairo', sans-serif;
+        align-content: stretch !'Cairo', sans-serif;
   }
   .align-self-md-auto {
-    -ms-flex-item-align: auto !important;
-        -ms-grid-row-align: auto !important;
-        align-self: auto !important;
+    -ms-flex-item-align: auto !'Cairo', sans-serif;
+        -ms-grid-row-align: auto !'Cairo', sans-serif;
+        align-self: auto !'Cairo', sans-serif;
   }
   .align-self-md-start {
-    -ms-flex-item-align: start !important;
-        align-self: flex-start !important;
+    -ms-flex-item-align: start !'Cairo', sans-serif;
+        align-self: flex-start !'Cairo', sans-serif;
   }
   .align-self-md-end {
-    -ms-flex-item-align: end !important;
-        align-self: flex-end !important;
+    -ms-flex-item-align: end !'Cairo', sans-serif;
+        align-self: flex-end !'Cairo', sans-serif;
   }
   .align-self-md-center {
-    -ms-flex-item-align: center !important;
-        -ms-grid-row-align: center !important;
-        align-self: center !important;
+    -ms-flex-item-align: center !'Cairo', sans-serif;
+        -ms-grid-row-align: center !'Cairo', sans-serif;
+        align-self: center !'Cairo', sans-serif;
   }
   .align-self-md-baseline {
-    -ms-flex-item-align: baseline !important;
-        align-self: baseline !important;
+    -ms-flex-item-align: baseline !'Cairo', sans-serif;
+        align-self: baseline !'Cairo', sans-serif;
   }
   .align-self-md-stretch {
-    -ms-flex-item-align: stretch !important;
-        -ms-grid-row-align: stretch !important;
-        align-self: stretch !important;
+    -ms-flex-item-align: stretch !'Cairo', sans-serif;
+        -ms-grid-row-align: stretch !'Cairo', sans-serif;
+        align-self: stretch !'Cairo', sans-serif;
   }
 }
 
 @media (min-width: 992px) {
   .flex-lg-row {
-    -webkit-box-orient: horizontal !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: row !important;
-            flex-direction: row !important;
+    -webkit-box-orient: horizontal !'Cairo', sans-serif;
+    -webkit-box-direction: normal !'Cairo', sans-serif;
+        -ms-flex-direction: row !'Cairo', sans-serif;
+            flex-direction: row !'Cairo', sans-serif;
   }
   .flex-lg-column {
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
+    -webkit-box-orient: vertical !'Cairo', sans-serif;
+    -webkit-box-direction: normal !'Cairo', sans-serif;
+        -ms-flex-direction: column !'Cairo', sans-serif;
+            flex-direction: column !'Cairo', sans-serif;
   }
   .flex-lg-row-reverse {
-    -webkit-box-orient: horizontal !important;
-    -webkit-box-direction: reverse !important;
-        -ms-flex-direction: row-reverse !important;
-            flex-direction: row-reverse !important;
+    -webkit-box-orient: horizontal !'Cairo', sans-serif;
+    -webkit-box-direction: reverse !'Cairo', sans-serif;
+        -ms-flex-direction: row-reverse !'Cairo', sans-serif;
+            flex-direction: row-reverse !'Cairo', sans-serif;
   }
   .flex-lg-column-reverse {
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: reverse !important;
-        -ms-flex-direction: column-reverse !important;
-            flex-direction: column-reverse !important;
+    -webkit-box-orient: vertical !'Cairo', sans-serif;
+    -webkit-box-direction: reverse !'Cairo', sans-serif;
+        -ms-flex-direction: column-reverse !'Cairo', sans-serif;
+            flex-direction: column-reverse !'Cairo', sans-serif;
   }
   .flex-lg-wrap {
-    -ms-flex-wrap: wrap !important;
-        flex-wrap: wrap !important;
+    -ms-flex-wrap: wrap !'Cairo', sans-serif;
+        flex-wrap: wrap !'Cairo', sans-serif;
   }
   .flex-lg-nowrap {
-    -ms-flex-wrap: nowrap !important;
-        flex-wrap: nowrap !important;
+    -ms-flex-wrap: nowrap !'Cairo', sans-serif;
+        flex-wrap: nowrap !'Cairo', sans-serif;
   }
   .flex-lg-wrap-reverse {
-    -ms-flex-wrap: wrap-reverse !important;
-        flex-wrap: wrap-reverse !important;
+    -ms-flex-wrap: wrap-reverse !'Cairo', sans-serif;
+        flex-wrap: wrap-reverse !'Cairo', sans-serif;
   }
   .flex-lg-fill {
-    -webkit-box-flex: 1 !important;
-        -ms-flex: 1 1 auto !important;
-            flex: 1 1 auto !important;
+    -webkit-box-flex: 1 !'Cairo', sans-serif;
+        -ms-flex: 1 1 auto !'Cairo', sans-serif;
+            flex: 1 1 auto !'Cairo', sans-serif;
   }
   .flex-lg-grow-0 {
-    -webkit-box-flex: 0 !important;
-        -ms-flex-positive: 0 !important;
-            flex-grow: 0 !important;
+    -webkit-box-flex: 0 !'Cairo', sans-serif;
+        -ms-flex-positive: 0 !'Cairo', sans-serif;
+            flex-grow: 0 !'Cairo', sans-serif;
   }
   .flex-lg-grow-1 {
-    -webkit-box-flex: 1 !important;
-        -ms-flex-positive: 1 !important;
-            flex-grow: 1 !important;
+    -webkit-box-flex: 1 !'Cairo', sans-serif;
+        -ms-flex-positive: 1 !'Cairo', sans-serif;
+            flex-grow: 1 !'Cairo', sans-serif;
   }
   .flex-lg-shrink-0 {
-    -ms-flex-negative: 0 !important;
-        flex-shrink: 0 !important;
+    -ms-flex-negative: 0 !'Cairo', sans-serif;
+        flex-shrink: 0 !'Cairo', sans-serif;
   }
   .flex-lg-shrink-1 {
-    -ms-flex-negative: 1 !important;
-        flex-shrink: 1 !important;
+    -ms-flex-negative: 1 !'Cairo', sans-serif;
+        flex-shrink: 1 !'Cairo', sans-serif;
   }
   .justify-content-lg-start {
-    -webkit-box-pack: start !important;
-        -ms-flex-pack: start !important;
-            justify-content: flex-start !important;
+    -webkit-box-pack: start !'Cairo', sans-serif;
+        -ms-flex-pack: start !'Cairo', sans-serif;
+            justify-content: flex-start !'Cairo', sans-serif;
   }
   .justify-content-lg-end {
-    -webkit-box-pack: end !important;
-        -ms-flex-pack: end !important;
-            justify-content: flex-end !important;
+    -webkit-box-pack: end !'Cairo', sans-serif;
+        -ms-flex-pack: end !'Cairo', sans-serif;
+            justify-content: flex-end !'Cairo', sans-serif;
   }
   .justify-content-lg-center {
-    -webkit-box-pack: center !important;
-        -ms-flex-pack: center !important;
-            justify-content: center !important;
+    -webkit-box-pack: center !'Cairo', sans-serif;
+        -ms-flex-pack: center !'Cairo', sans-serif;
+            justify-content: center !'Cairo', sans-serif;
   }
   .justify-content-lg-between {
-    -webkit-box-pack: justify !important;
-        -ms-flex-pack: justify !important;
-            justify-content: space-between !important;
+    -webkit-box-pack: justify !'Cairo', sans-serif;
+        -ms-flex-pack: justify !'Cairo', sans-serif;
+            justify-content: space-between !'Cairo', sans-serif;
   }
   .justify-content-lg-around {
-    -ms-flex-pack: distribute !important;
-        justify-content: space-around !important;
+    -ms-flex-pack: distribute !'Cairo', sans-serif;
+        justify-content: space-around !'Cairo', sans-serif;
   }
   .align-items-lg-start {
-    -webkit-box-align: start !important;
-        -ms-flex-align: start !important;
-            align-items: flex-start !important;
+    -webkit-box-align: start !'Cairo', sans-serif;
+        -ms-flex-align: start !'Cairo', sans-serif;
+            align-items: flex-start !'Cairo', sans-serif;
   }
   .align-items-lg-end {
-    -webkit-box-align: end !important;
-        -ms-flex-align: end !important;
-            align-items: flex-end !important;
+    -webkit-box-align: end !'Cairo', sans-serif;
+        -ms-flex-align: end !'Cairo', sans-serif;
+            align-items: flex-end !'Cairo', sans-serif;
   }
   .align-items-lg-center {
-    -webkit-box-align: center !important;
-        -ms-flex-align: center !important;
-            align-items: center !important;
+    -webkit-box-align: center !'Cairo', sans-serif;
+        -ms-flex-align: center !'Cairo', sans-serif;
+            align-items: center !'Cairo', sans-serif;
   }
   .align-items-lg-baseline {
-    -webkit-box-align: baseline !important;
-        -ms-flex-align: baseline !important;
-            align-items: baseline !important;
+    -webkit-box-align: baseline !'Cairo', sans-serif;
+        -ms-flex-align: baseline !'Cairo', sans-serif;
+            align-items: baseline !'Cairo', sans-serif;
   }
   .align-items-lg-stretch {
-    -webkit-box-align: stretch !important;
-        -ms-flex-align: stretch !important;
-            align-items: stretch !important;
+    -webkit-box-align: stretch !'Cairo', sans-serif;
+        -ms-flex-align: stretch !'Cairo', sans-serif;
+            align-items: stretch !'Cairo', sans-serif;
   }
   .align-content-lg-start {
-    -ms-flex-line-pack: start !important;
-        align-content: flex-start !important;
+    -ms-flex-line-pack: start !'Cairo', sans-serif;
+        align-content: flex-start !'Cairo', sans-serif;
   }
   .align-content-lg-end {
-    -ms-flex-line-pack: end !important;
-        align-content: flex-end !important;
+    -ms-flex-line-pack: end !'Cairo', sans-serif;
+        align-content: flex-end !'Cairo', sans-serif;
   }
   .align-content-lg-center {
-    -ms-flex-line-pack: center !important;
-        align-content: center !important;
+    -ms-flex-line-pack: center !'Cairo', sans-serif;
+        align-content: center !'Cairo', sans-serif;
   }
   .align-content-lg-between {
-    -ms-flex-line-pack: justify !important;
-        align-content: space-between !important;
+    -ms-flex-line-pack: justify !'Cairo', sans-serif;
+        align-content: space-between !'Cairo', sans-serif;
   }
   .align-content-lg-around {
-    -ms-flex-line-pack: distribute !important;
-        align-content: space-around !important;
+    -ms-flex-line-pack: distribute !'Cairo', sans-serif;
+        align-content: space-around !'Cairo', sans-serif;
   }
   .align-content-lg-stretch {
-    -ms-flex-line-pack: stretch !important;
-        align-content: stretch !important;
+    -ms-flex-line-pack: stretch !'Cairo', sans-serif;
+        align-content: stretch !'Cairo', sans-serif;
   }
   .align-self-lg-auto {
-    -ms-flex-item-align: auto !important;
-        -ms-grid-row-align: auto !important;
-        align-self: auto !important;
+    -ms-flex-item-align: auto !'Cairo', sans-serif;
+        -ms-grid-row-align: auto !'Cairo', sans-serif;
+        align-self: auto !'Cairo', sans-serif;
   }
   .align-self-lg-start {
-    -ms-flex-item-align: start !important;
-        align-self: flex-start !important;
+    -ms-flex-item-align: start !'Cairo', sans-serif;
+        align-self: flex-start !'Cairo', sans-serif;
   }
   .align-self-lg-end {
-    -ms-flex-item-align: end !important;
-        align-self: flex-end !important;
+    -ms-flex-item-align: end !'Cairo', sans-serif;
+        align-self: flex-end !'Cairo', sans-serif;
   }
   .align-self-lg-center {
-    -ms-flex-item-align: center !important;
-        -ms-grid-row-align: center !important;
-        align-self: center !important;
+    -ms-flex-item-align: center !'Cairo', sans-serif;
+        -ms-grid-row-align: center !'Cairo', sans-serif;
+        align-self: center !'Cairo', sans-serif;
   }
   .align-self-lg-baseline {
-    -ms-flex-item-align: baseline !important;
-        align-self: baseline !important;
+    -ms-flex-item-align: baseline !'Cairo', sans-serif;
+        align-self: baseline !'Cairo', sans-serif;
   }
   .align-self-lg-stretch {
-    -ms-flex-item-align: stretch !important;
-        -ms-grid-row-align: stretch !important;
-        align-self: stretch !important;
+    -ms-flex-item-align: stretch !'Cairo', sans-serif;
+        -ms-grid-row-align: stretch !'Cairo', sans-serif;
+        align-self: stretch !'Cairo', sans-serif;
   }
 }
 
 @media (min-width: 1200px) {
   .flex-xl-row {
-    -webkit-box-orient: horizontal !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: row !important;
-            flex-direction: row !important;
+    -webkit-box-orient: horizontal !'Cairo', sans-serif;
+    -webkit-box-direction: normal !'Cairo', sans-serif;
+        -ms-flex-direction: row !'Cairo', sans-serif;
+            flex-direction: row !'Cairo', sans-serif;
   }
   .flex-xl-column {
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
+    -webkit-box-orient: vertical !'Cairo', sans-serif;
+    -webkit-box-direction: normal !'Cairo', sans-serif;
+        -ms-flex-direction: column !'Cairo', sans-serif;
+            flex-direction: column !'Cairo', sans-serif;
   }
   .flex-xl-row-reverse {
-    -webkit-box-orient: horizontal !important;
-    -webkit-box-direction: reverse !important;
-        -ms-flex-direction: row-reverse !important;
-            flex-direction: row-reverse !important;
+    -webkit-box-orient: horizontal !'Cairo', sans-serif;
+    -webkit-box-direction: reverse !'Cairo', sans-serif;
+        -ms-flex-direction: row-reverse !'Cairo', sans-serif;
+            flex-direction: row-reverse !'Cairo', sans-serif;
   }
   .flex-xl-column-reverse {
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: reverse !important;
-        -ms-flex-direction: column-reverse !important;
-            flex-direction: column-reverse !important;
+    -webkit-box-orient: vertical !'Cairo', sans-serif;
+    -webkit-box-direction: reverse !'Cairo', sans-serif;
+        -ms-flex-direction: column-reverse !'Cairo', sans-serif;
+            flex-direction: column-reverse !'Cairo', sans-serif;
   }
   .flex-xl-wrap {
-    -ms-flex-wrap: wrap !important;
-        flex-wrap: wrap !important;
+    -ms-flex-wrap: wrap !'Cairo', sans-serif;
+        flex-wrap: wrap !'Cairo', sans-serif;
   }
   .flex-xl-nowrap {
-    -ms-flex-wrap: nowrap !important;
-        flex-wrap: nowrap !important;
+    -ms-flex-wrap: nowrap !'Cairo', sans-serif;
+        flex-wrap: nowrap !'Cairo', sans-serif;
   }
   .flex-xl-wrap-reverse {
-    -ms-flex-wrap: wrap-reverse !important;
-        flex-wrap: wrap-reverse !important;
+    -ms-flex-wrap: wrap-reverse !'Cairo', sans-serif;
+        flex-wrap: wrap-reverse !'Cairo', sans-serif;
   }
   .flex-xl-fill {
-    -webkit-box-flex: 1 !important;
-        -ms-flex: 1 1 auto !important;
-            flex: 1 1 auto !important;
+    -webkit-box-flex: 1 !'Cairo', sans-serif;
+        -ms-flex: 1 1 auto !'Cairo', sans-serif;
+            flex: 1 1 auto !'Cairo', sans-serif;
   }
   .flex-xl-grow-0 {
-    -webkit-box-flex: 0 !important;
-        -ms-flex-positive: 0 !important;
-            flex-grow: 0 !important;
+    -webkit-box-flex: 0 !'Cairo', sans-serif;
+        -ms-flex-positive: 0 !'Cairo', sans-serif;
+            flex-grow: 0 !'Cairo', sans-serif;
   }
   .flex-xl-grow-1 {
-    -webkit-box-flex: 1 !important;
-        -ms-flex-positive: 1 !important;
-            flex-grow: 1 !important;
+    -webkit-box-flex: 1 !'Cairo', sans-serif;
+        -ms-flex-positive: 1 !'Cairo', sans-serif;
+            flex-grow: 1 !'Cairo', sans-serif;
   }
   .flex-xl-shrink-0 {
-    -ms-flex-negative: 0 !important;
-        flex-shrink: 0 !important;
+    -ms-flex-negative: 0 !'Cairo', sans-serif;
+        flex-shrink: 0 !'Cairo', sans-serif;
   }
   .flex-xl-shrink-1 {
-    -ms-flex-negative: 1 !important;
-        flex-shrink: 1 !important;
+    -ms-flex-negative: 1 !'Cairo', sans-serif;
+        flex-shrink: 1 !'Cairo', sans-serif;
   }
   .justify-content-xl-start {
-    -webkit-box-pack: start !important;
-        -ms-flex-pack: start !important;
-            justify-content: flex-start !important;
+    -webkit-box-pack: start !'Cairo', sans-serif;
+        -ms-flex-pack: start !'Cairo', sans-serif;
+            justify-content: flex-start !'Cairo', sans-serif;
   }
   .justify-content-xl-end {
-    -webkit-box-pack: end !important;
-        -ms-flex-pack: end !important;
-            justify-content: flex-end !important;
+    -webkit-box-pack: end !'Cairo', sans-serif;
+        -ms-flex-pack: end !'Cairo', sans-serif;
+            justify-content: flex-end !'Cairo', sans-serif;
   }
   .justify-content-xl-center {
-    -webkit-box-pack: center !important;
-        -ms-flex-pack: center !important;
-            justify-content: center !important;
+    -webkit-box-pack: center !'Cairo', sans-serif;
+        -ms-flex-pack: center !'Cairo', sans-serif;
+            justify-content: center !'Cairo', sans-serif;
   }
   .justify-content-xl-between {
-    -webkit-box-pack: justify !important;
-        -ms-flex-pack: justify !important;
-            justify-content: space-between !important;
+    -webkit-box-pack: justify !'Cairo', sans-serif;
+        -ms-flex-pack: justify !'Cairo', sans-serif;
+            justify-content: space-between !'Cairo', sans-serif;
   }
   .justify-content-xl-around {
-    -ms-flex-pack: distribute !important;
-        justify-content: space-around !important;
+    -ms-flex-pack: distribute !'Cairo', sans-serif;
+        justify-content: space-around !'Cairo', sans-serif;
   }
   .align-items-xl-start {
-    -webkit-box-align: start !important;
-        -ms-flex-align: start !important;
-            align-items: flex-start !important;
+    -webkit-box-align: start !'Cairo', sans-serif;
+        -ms-flex-align: start !'Cairo', sans-serif;
+            align-items: flex-start !'Cairo', sans-serif;
   }
   .align-items-xl-end {
-    -webkit-box-align: end !important;
-        -ms-flex-align: end !important;
-            align-items: flex-end !important;
+    -webkit-box-align: end !'Cairo', sans-serif;
+        -ms-flex-align: end !'Cairo', sans-serif;
+            align-items: flex-end !'Cairo', sans-serif;
   }
   .align-items-xl-center {
-    -webkit-box-align: center !important;
-        -ms-flex-align: center !important;
-            align-items: center !important;
+    -webkit-box-align: center !'Cairo', sans-serif;
+        -ms-flex-align: center !'Cairo', sans-serif;
+            align-items: center !'Cairo', sans-serif;
   }
   .align-items-xl-baseline {
-    -webkit-box-align: baseline !important;
-        -ms-flex-align: baseline !important;
-            align-items: baseline !important;
+    -webkit-box-align: baseline !'Cairo', sans-serif;
+        -ms-flex-align: baseline !'Cairo', sans-serif;
+            align-items: baseline !'Cairo', sans-serif;
   }
   .align-items-xl-stretch {
-    -webkit-box-align: stretch !important;
-        -ms-flex-align: stretch !important;
-            align-items: stretch !important;
+    -webkit-box-align: stretch !'Cairo', sans-serif;
+        -ms-flex-align: stretch !'Cairo', sans-serif;
+            align-items: stretch !'Cairo', sans-serif;
   }
   .align-content-xl-start {
-    -ms-flex-line-pack: start !important;
-        align-content: flex-start !important;
+    -ms-flex-line-pack: start !'Cairo', sans-serif;
+        align-content: flex-start !'Cairo', sans-serif;
   }
   .align-content-xl-end {
-    -ms-flex-line-pack: end !important;
-        align-content: flex-end !important;
+    -ms-flex-line-pack: end !'Cairo', sans-serif;
+        align-content: flex-end !'Cairo', sans-serif;
   }
   .align-content-xl-center {
-    -ms-flex-line-pack: center !important;
-        align-content: center !important;
+    -ms-flex-line-pack: center !'Cairo', sans-serif;
+        align-content: center !'Cairo', sans-serif;
   }
   .align-content-xl-between {
-    -ms-flex-line-pack: justify !important;
-        align-content: space-between !important;
+    -ms-flex-line-pack: justify !'Cairo', sans-serif;
+        align-content: space-between !'Cairo', sans-serif;
   }
   .align-content-xl-around {
-    -ms-flex-line-pack: distribute !important;
-        align-content: space-around !important;
+    -ms-flex-line-pack: distribute !'Cairo', sans-serif;
+        align-content: space-around !'Cairo', sans-serif;
   }
   .align-content-xl-stretch {
-    -ms-flex-line-pack: stretch !important;
-        align-content: stretch !important;
+    -ms-flex-line-pack: stretch !'Cairo', sans-serif;
+        align-content: stretch !'Cairo', sans-serif;
   }
   .align-self-xl-auto {
-    -ms-flex-item-align: auto !important;
-        -ms-grid-row-align: auto !important;
-        align-self: auto !important;
+    -ms-flex-item-align: auto !'Cairo', sans-serif;
+        -ms-grid-row-align: auto !'Cairo', sans-serif;
+        align-self: auto !'Cairo', sans-serif;
   }
   .align-self-xl-start {
-    -ms-flex-item-align: start !important;
-        align-self: flex-start !important;
+    -ms-flex-item-align: start !'Cairo', sans-serif;
+        align-self: flex-start !'Cairo', sans-serif;
   }
   .align-self-xl-end {
-    -ms-flex-item-align: end !important;
-        align-self: flex-end !important;
+    -ms-flex-item-align: end !'Cairo', sans-serif;
+        align-self: flex-end !'Cairo', sans-serif;
   }
   .align-self-xl-center {
-    -ms-flex-item-align: center !important;
-        -ms-grid-row-align: center !important;
-        align-self: center !important;
+    -ms-flex-item-align: center !'Cairo', sans-serif;
+        -ms-grid-row-align: center !'Cairo', sans-serif;
+        align-self: center !'Cairo', sans-serif;
   }
   .align-self-xl-baseline {
-    -ms-flex-item-align: baseline !important;
-        align-self: baseline !important;
+    -ms-flex-item-align: baseline !'Cairo', sans-serif;
+        align-self: baseline !'Cairo', sans-serif;
   }
   .align-self-xl-stretch {
-    -ms-flex-item-align: stretch !important;
-        -ms-grid-row-align: stretch !important;
-        align-self: stretch !important;
+    -ms-flex-item-align: stretch !'Cairo', sans-serif;
+        -ms-grid-row-align: stretch !'Cairo', sans-serif;
+        align-self: stretch !'Cairo', sans-serif;
   }
 }
 
 .float-left {
-  float: left !important;
+  float: left !'Cairo', sans-serif;
 }
 
 .float-right {
-  float: right !important;
+  float: right !'Cairo', sans-serif;
 }
 
 .float-none {
-  float: none !important;
+  float: none !'Cairo', sans-serif;
 }
 
 @media (min-width: 576px) {
   .float-sm-left {
-    float: left !important;
+    float: left !'Cairo', sans-serif;
   }
   .float-sm-right {
-    float: right !important;
+    float: right !'Cairo', sans-serif;
   }
   .float-sm-none {
-    float: none !important;
+    float: none !'Cairo', sans-serif;
   }
 }
 
 @media (min-width: 768px) {
   .float-md-left {
-    float: left !important;
+    float: left !'Cairo', sans-serif;
   }
   .float-md-right {
-    float: right !important;
+    float: right !'Cairo', sans-serif;
   }
   .float-md-none {
-    float: none !important;
+    float: none !'Cairo', sans-serif;
   }
 }
 
 @media (min-width: 992px) {
   .float-lg-left {
-    float: left !important;
+    float: left !'Cairo', sans-serif;
   }
   .float-lg-right {
-    float: right !important;
+    float: right !'Cairo', sans-serif;
   }
   .float-lg-none {
-    float: none !important;
+    float: none !'Cairo', sans-serif;
   }
 }
 
 @media (min-width: 1200px) {
   .float-xl-left {
-    float: left !important;
+    float: left !'Cairo', sans-serif;
   }
   .float-xl-right {
-    float: right !important;
+    float: right !'Cairo', sans-serif;
   }
   .float-xl-none {
-    float: none !important;
+    float: none !'Cairo', sans-serif;
   }
 }
 
 .user-select-all {
-  -webkit-user-select: all !important;
-     -moz-user-select: all !important;
-      -ms-user-select: all !important;
-          user-select: all !important;
+  -webkit-user-select: all !'Cairo', sans-serif;
+     -moz-user-select: all !'Cairo', sans-serif;
+      -ms-user-select: all !'Cairo', sans-serif;
+          user-select: all !'Cairo', sans-serif;
 }
 
 .user-select-auto {
-  -webkit-user-select: auto !important;
-     -moz-user-select: auto !important;
-      -ms-user-select: auto !important;
-          user-select: auto !important;
+  -webkit-user-select: auto !'Cairo', sans-serif;
+     -moz-user-select: auto !'Cairo', sans-serif;
+      -ms-user-select: auto !'Cairo', sans-serif;
+          user-select: auto !'Cairo', sans-serif;
 }
 
 .user-select-none {
-  -webkit-user-select: none !important;
-     -moz-user-select: none !important;
-      -ms-user-select: none !important;
-          user-select: none !important;
+  -webkit-user-select: none !'Cairo', sans-serif;
+     -moz-user-select: none !'Cairo', sans-serif;
+      -ms-user-select: none !'Cairo', sans-serif;
+          user-select: none !'Cairo', sans-serif;
 }
 
 .overflow-auto {
-  overflow: auto !important;
+  overflow: auto !'Cairo', sans-serif;
 }
 
 .overflow-hidden {
-  overflow: hidden !important;
+  overflow: hidden !'Cairo', sans-serif;
 }
 
 .position-static {
-  position: static !important;
+  position: static !'Cairo', sans-serif;
 }
 
 .position-relative {
-  position: relative !important;
+  position: relative !'Cairo', sans-serif;
 }
 
 .position-absolute {
-  position: absolute !important;
+  position: absolute !'Cairo', sans-serif;
 }
 
 .position-fixed {
-  position: fixed !important;
+  position: fixed !'Cairo', sans-serif;
 }
 
 .position-sticky {
-  position: -webkit-sticky !important;
-  position: sticky !important;
+  position: -webkit-sticky !'Cairo', sans-serif;
+  position: sticky !'Cairo', sans-serif;
 }
 
 .fixed-top {
@@ -9709,1900 +9711,1900 @@ button.bg-dark:focus {
 }
 
 .shadow-sm {
-  -webkit-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
-          box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  -webkit-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !'Cairo', sans-serif;
+          box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !'Cairo', sans-serif;
 }
 
 .shadow {
-  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !'Cairo', sans-serif;
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !'Cairo', sans-serif;
 }
 
 .shadow-lg {
-  -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
-          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+  -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !'Cairo', sans-serif;
+          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !'Cairo', sans-serif;
 }
 
 .shadow-none {
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
+  -webkit-box-shadow: none !'Cairo', sans-serif;
+          box-shadow: none !'Cairo', sans-serif;
 }
 
 .w-25 {
-  width: 25% !important;
+  width: 25% !'Cairo', sans-serif;
 }
 
 .w-50 {
-  width: 50% !important;
+  width: 50% !'Cairo', sans-serif;
 }
 
 .w-75 {
-  width: 75% !important;
+  width: 75% !'Cairo', sans-serif;
 }
 
 .w-100 {
-  width: 100% !important;
+  width: 100% !'Cairo', sans-serif;
 }
 
 .w-auto {
-  width: auto !important;
+  width: auto !'Cairo', sans-serif;
 }
 
 .h-25 {
-  height: 25% !important;
+  height: 25% !'Cairo', sans-serif;
 }
 
 .h-50 {
-  height: 50% !important;
+  height: 50% !'Cairo', sans-serif;
 }
 
 .h-75 {
-  height: 75% !important;
+  height: 75% !'Cairo', sans-serif;
 }
 
 .h-100 {
-  height: 100% !important;
+  height: 100% !'Cairo', sans-serif;
 }
 
 .h-auto {
-  height: auto !important;
+  height: auto !'Cairo', sans-serif;
 }
 
 .mw-100 {
-  max-width: 100% !important;
+  max-width: 100% !'Cairo', sans-serif;
 }
 
 .mh-100 {
-  max-height: 100% !important;
+  max-height: 100% !'Cairo', sans-serif;
 }
 
 .min-vw-100 {
-  min-width: 100vw !important;
+  min-width: 100vw !'Cairo', sans-serif;
 }
 
 .min-vh-100 {
-  min-height: 100vh !important;
+  min-height: 100vh !'Cairo', sans-serif;
 }
 
 .vw-100 {
-  width: 100vw !important;
+  width: 100vw !'Cairo', sans-serif;
 }
 
 .vh-100 {
-  height: 100vh !important;
+  height: 100vh !'Cairo', sans-serif;
 }
 
 .m-0 {
-  margin: 0 !important;
+  margin: 0 !'Cairo', sans-serif;
 }
 
 .mt-0,
 .my-0 {
-  margin-top: 0 !important;
+  margin-top: 0 !'Cairo', sans-serif;
 }
 
 .mr-0,
 .mx-0 {
-  margin-right: 0 !important;
+  margin-right: 0 !'Cairo', sans-serif;
 }
 
 .mb-0,
 .my-0 {
-  margin-bottom: 0 !important;
+  margin-bottom: 0 !'Cairo', sans-serif;
 }
 
 .ml-0,
 .mx-0 {
-  margin-left: 0 !important;
+  margin-left: 0 !'Cairo', sans-serif;
 }
 
 .m-1 {
-  margin: 0.25rem !important;
+  margin: 0.25rem !'Cairo', sans-serif;
 }
 
 .mt-1,
 .my-1 {
-  margin-top: 0.25rem !important;
+  margin-top: 0.25rem !'Cairo', sans-serif;
 }
 
 .mr-1,
 .mx-1 {
-  margin-right: 0.25rem !important;
+  margin-right: 0.25rem !'Cairo', sans-serif;
 }
 
 .mb-1,
 .my-1 {
-  margin-bottom: 0.25rem !important;
+  margin-bottom: 0.25rem !'Cairo', sans-serif;
 }
 
 .ml-1,
 .mx-1 {
-  margin-left: 0.25rem !important;
+  margin-left: 0.25rem !'Cairo', sans-serif;
 }
 
 .m-2 {
-  margin: 0.5rem !important;
+  margin: 0.5rem !'Cairo', sans-serif;
 }
 
 .mt-2,
 .my-2 {
-  margin-top: 0.5rem !important;
+  margin-top: 0.5rem !'Cairo', sans-serif;
 }
 
 .mr-2,
 .mx-2 {
-  margin-right: 0.5rem !important;
+  margin-right: 0.5rem !'Cairo', sans-serif;
 }
 
 .mb-2,
 .my-2 {
-  margin-bottom: 0.5rem !important;
+  margin-bottom: 0.5rem !'Cairo', sans-serif;
 }
 
 .ml-2,
 .mx-2 {
-  margin-left: 0.5rem !important;
+  margin-left: 0.5rem !'Cairo', sans-serif;
 }
 
 .m-3 {
-  margin: 1rem !important;
+  margin: 1rem !'Cairo', sans-serif;
 }
 
 .mt-3,
 .my-3 {
-  margin-top: 1rem !important;
+  margin-top: 1rem !'Cairo', sans-serif;
 }
 
 .mr-3,
 .mx-3 {
-  margin-right: 1rem !important;
+  margin-right: 1rem !'Cairo', sans-serif;
 }
 
 .mb-3,
 .my-3 {
-  margin-bottom: 1rem !important;
+  margin-bottom: 1rem !'Cairo', sans-serif;
 }
 
 .ml-3,
 .mx-3 {
-  margin-left: 1rem !important;
+  margin-left: 1rem !'Cairo', sans-serif;
 }
 
 .m-4 {
-  margin: 1.5rem !important;
+  margin: 1.5rem !'Cairo', sans-serif;
 }
 
 .mt-4,
 .my-4 {
-  margin-top: 1.5rem !important;
+  margin-top: 1.5rem !'Cairo', sans-serif;
 }
 
 .mr-4,
 .mx-4 {
-  margin-right: 1.5rem !important;
+  margin-right: 1.5rem !'Cairo', sans-serif;
 }
 
 .mb-4,
 .my-4 {
-  margin-bottom: 1.5rem !important;
+  margin-bottom: 1.5rem !'Cairo', sans-serif;
 }
 
 .ml-4,
 .mx-4 {
-  margin-left: 1.5rem !important;
+  margin-left: 1.5rem !'Cairo', sans-serif;
 }
 
 .m-5 {
-  margin: 3rem !important;
+  margin: 3rem !'Cairo', sans-serif;
 }
 
 .mt-5,
 .my-5 {
-  margin-top: 3rem !important;
+  margin-top: 3rem !'Cairo', sans-serif;
 }
 
 .mr-5,
 .mx-5 {
-  margin-right: 3rem !important;
+  margin-right: 3rem !'Cairo', sans-serif;
 }
 
 .mb-5,
 .my-5 {
-  margin-bottom: 3rem !important;
+  margin-bottom: 3rem !'Cairo', sans-serif;
 }
 
 .ml-5,
 .mx-5 {
-  margin-left: 3rem !important;
+  margin-left: 3rem !'Cairo', sans-serif;
 }
 
 .p-0 {
-  padding: 0 !important;
+  padding: 0 !'Cairo', sans-serif;
 }
 
 .pt-0,
 .py-0 {
-  padding-top: 0 !important;
+  padding-top: 0 !'Cairo', sans-serif;
 }
 
 .pr-0,
 .px-0 {
-  padding-right: 0 !important;
+  padding-right: 0 !'Cairo', sans-serif;
 }
 
 .pb-0,
 .py-0 {
-  padding-bottom: 0 !important;
+  padding-bottom: 0 !'Cairo', sans-serif;
 }
 
 .pl-0,
 .px-0 {
-  padding-left: 0 !important;
+  padding-left: 0 !'Cairo', sans-serif;
 }
 
 .p-1 {
-  padding: 0.25rem !important;
+  padding: 0.25rem !'Cairo', sans-serif;
 }
 
 .pt-1,
 .py-1 {
-  padding-top: 0.25rem !important;
+  padding-top: 0.25rem !'Cairo', sans-serif;
 }
 
 .pr-1,
 .px-1 {
-  padding-right: 0.25rem !important;
+  padding-right: 0.25rem !'Cairo', sans-serif;
 }
 
 .pb-1,
 .py-1 {
-  padding-bottom: 0.25rem !important;
+  padding-bottom: 0.25rem !'Cairo', sans-serif;
 }
 
 .pl-1,
 .px-1 {
-  padding-left: 0.25rem !important;
+  padding-left: 0.25rem !'Cairo', sans-serif;
 }
 
 .p-2 {
-  padding: 0.5rem !important;
+  padding: 0.5rem !'Cairo', sans-serif;
 }
 
 .pt-2,
 .py-2 {
-  padding-top: 0.5rem !important;
+  padding-top: 0.5rem !'Cairo', sans-serif;
 }
 
 .pr-2,
 .px-2 {
-  padding-right: 0.5rem !important;
+  padding-right: 0.5rem !'Cairo', sans-serif;
 }
 
 .pb-2,
 .py-2 {
-  padding-bottom: 0.5rem !important;
+  padding-bottom: 0.5rem !'Cairo', sans-serif;
 }
 
 .pl-2,
 .px-2 {
-  padding-left: 0.5rem !important;
+  padding-left: 0.5rem !'Cairo', sans-serif;
 }
 
 .p-3 {
-  padding: 1rem !important;
+  padding: 1rem !'Cairo', sans-serif;
 }
 
 .pt-3,
 .py-3 {
-  padding-top: 1rem !important;
+  padding-top: 1rem !'Cairo', sans-serif;
 }
 
 .pr-3,
 .px-3 {
-  padding-right: 1rem !important;
+  padding-right: 1rem !'Cairo', sans-serif;
 }
 
 .pb-3,
 .py-3 {
-  padding-bottom: 1rem !important;
+  padding-bottom: 1rem !'Cairo', sans-serif;
 }
 
 .pl-3,
 .px-3 {
-  padding-left: 1rem !important;
+  padding-left: 1rem !'Cairo', sans-serif;
 }
 
 .p-4 {
-  padding: 1.5rem !important;
+  padding: 1.5rem !'Cairo', sans-serif;
 }
 
 .pt-4,
 .py-4 {
-  padding-top: 1.5rem !important;
+  padding-top: 1.5rem !'Cairo', sans-serif;
 }
 
 .pr-4,
 .px-4 {
-  padding-right: 1.5rem !important;
+  padding-right: 1.5rem !'Cairo', sans-serif;
 }
 
 .pb-4,
 .py-4 {
-  padding-bottom: 1.5rem !important;
+  padding-bottom: 1.5rem !'Cairo', sans-serif;
 }
 
 .pl-4,
 .px-4 {
-  padding-left: 1.5rem !important;
+  padding-left: 1.5rem !'Cairo', sans-serif;
 }
 
 .p-5 {
-  padding: 3rem !important;
+  padding: 3rem !'Cairo', sans-serif;
 }
 
 .pt-5,
 .py-5 {
-  padding-top: 3rem !important;
+  padding-top: 3rem !'Cairo', sans-serif;
 }
 
 .pr-5,
 .px-5 {
-  padding-right: 3rem !important;
+  padding-right: 3rem !'Cairo', sans-serif;
 }
 
 .pb-5,
 .py-5 {
-  padding-bottom: 3rem !important;
+  padding-bottom: 3rem !'Cairo', sans-serif;
 }
 
 .pl-5,
 .px-5 {
-  padding-left: 3rem !important;
+  padding-left: 3rem !'Cairo', sans-serif;
 }
 
 .m-n1 {
-  margin: -0.25rem !important;
+  margin: -0.25rem !'Cairo', sans-serif;
 }
 
 .mt-n1,
 .my-n1 {
-  margin-top: -0.25rem !important;
+  margin-top: -0.25rem !'Cairo', sans-serif;
 }
 
 .mr-n1,
 .mx-n1 {
-  margin-right: -0.25rem !important;
+  margin-right: -0.25rem !'Cairo', sans-serif;
 }
 
 .mb-n1,
 .my-n1 {
-  margin-bottom: -0.25rem !important;
+  margin-bottom: -0.25rem !'Cairo', sans-serif;
 }
 
 .ml-n1,
 .mx-n1 {
-  margin-left: -0.25rem !important;
+  margin-left: -0.25rem !'Cairo', sans-serif;
 }
 
 .m-n2 {
-  margin: -0.5rem !important;
+  margin: -0.5rem !'Cairo', sans-serif;
 }
 
 .mt-n2,
 .my-n2 {
-  margin-top: -0.5rem !important;
+  margin-top: -0.5rem !'Cairo', sans-serif;
 }
 
 .mr-n2,
 .mx-n2 {
-  margin-right: -0.5rem !important;
+  margin-right: -0.5rem !'Cairo', sans-serif;
 }
 
 .mb-n2,
 .my-n2 {
-  margin-bottom: -0.5rem !important;
+  margin-bottom: -0.5rem !'Cairo', sans-serif;
 }
 
 .ml-n2,
 .mx-n2 {
-  margin-left: -0.5rem !important;
+  margin-left: -0.5rem !'Cairo', sans-serif;
 }
 
 .m-n3 {
-  margin: -1rem !important;
+  margin: -1rem !'Cairo', sans-serif;
 }
 
 .mt-n3,
 .my-n3 {
-  margin-top: -1rem !important;
+  margin-top: -1rem !'Cairo', sans-serif;
 }
 
 .mr-n3,
 .mx-n3 {
-  margin-right: -1rem !important;
+  margin-right: -1rem !'Cairo', sans-serif;
 }
 
 .mb-n3,
 .my-n3 {
-  margin-bottom: -1rem !important;
+  margin-bottom: -1rem !'Cairo', sans-serif;
 }
 
 .ml-n3,
 .mx-n3 {
-  margin-left: -1rem !important;
+  margin-left: -1rem !'Cairo', sans-serif;
 }
 
 .m-n4 {
-  margin: -1.5rem !important;
+  margin: -1.5rem !'Cairo', sans-serif;
 }
 
 .mt-n4,
 .my-n4 {
-  margin-top: -1.5rem !important;
+  margin-top: -1.5rem !'Cairo', sans-serif;
 }
 
 .mr-n4,
 .mx-n4 {
-  margin-right: -1.5rem !important;
+  margin-right: -1.5rem !'Cairo', sans-serif;
 }
 
 .mb-n4,
 .my-n4 {
-  margin-bottom: -1.5rem !important;
+  margin-bottom: -1.5rem !'Cairo', sans-serif;
 }
 
 .ml-n4,
 .mx-n4 {
-  margin-left: -1.5rem !important;
+  margin-left: -1.5rem !'Cairo', sans-serif;
 }
 
 .m-n5 {
-  margin: -3rem !important;
+  margin: -3rem !'Cairo', sans-serif;
 }
 
 .mt-n5,
 .my-n5 {
-  margin-top: -3rem !important;
+  margin-top: -3rem !'Cairo', sans-serif;
 }
 
 .mr-n5,
 .mx-n5 {
-  margin-right: -3rem !important;
+  margin-right: -3rem !'Cairo', sans-serif;
 }
 
 .mb-n5,
 .my-n5 {
-  margin-bottom: -3rem !important;
+  margin-bottom: -3rem !'Cairo', sans-serif;
 }
 
 .ml-n5,
 .mx-n5 {
-  margin-left: -3rem !important;
+  margin-left: -3rem !'Cairo', sans-serif;
 }
 
 .m-auto {
-  margin: auto !important;
+  margin: auto !'Cairo', sans-serif;
 }
 
 .mt-auto,
 .my-auto {
-  margin-top: auto !important;
+  margin-top: auto !'Cairo', sans-serif;
 }
 
 .mr-auto,
 .mx-auto,
 .aligncenter {
-  margin-right: auto !important;
+  margin-right: auto !'Cairo', sans-serif;
 }
 
 .mb-auto,
 .my-auto {
-  margin-bottom: auto !important;
+  margin-bottom: auto !'Cairo', sans-serif;
 }
 
 .ml-auto,
 .mx-auto,
 .aligncenter {
-  margin-left: auto !important;
+  margin-left: auto !'Cairo', sans-serif;
 }
 
 @media (min-width: 576px) {
   .m-sm-0 {
-    margin: 0 !important;
+    margin: 0 !'Cairo', sans-serif;
   }
   .mt-sm-0,
   .my-sm-0 {
-    margin-top: 0 !important;
+    margin-top: 0 !'Cairo', sans-serif;
   }
   .mr-sm-0,
   .mx-sm-0 {
-    margin-right: 0 !important;
+    margin-right: 0 !'Cairo', sans-serif;
   }
   .mb-sm-0,
   .my-sm-0 {
-    margin-bottom: 0 !important;
+    margin-bottom: 0 !'Cairo', sans-serif;
   }
   .ml-sm-0,
   .mx-sm-0 {
-    margin-left: 0 !important;
+    margin-left: 0 !'Cairo', sans-serif;
   }
   .m-sm-1 {
-    margin: 0.25rem !important;
+    margin: 0.25rem !'Cairo', sans-serif;
   }
   .mt-sm-1,
   .my-sm-1 {
-    margin-top: 0.25rem !important;
+    margin-top: 0.25rem !'Cairo', sans-serif;
   }
   .mr-sm-1,
   .mx-sm-1 {
-    margin-right: 0.25rem !important;
+    margin-right: 0.25rem !'Cairo', sans-serif;
   }
   .mb-sm-1,
   .my-sm-1 {
-    margin-bottom: 0.25rem !important;
+    margin-bottom: 0.25rem !'Cairo', sans-serif;
   }
   .ml-sm-1,
   .mx-sm-1 {
-    margin-left: 0.25rem !important;
+    margin-left: 0.25rem !'Cairo', sans-serif;
   }
   .m-sm-2 {
-    margin: 0.5rem !important;
+    margin: 0.5rem !'Cairo', sans-serif;
   }
   .mt-sm-2,
   .my-sm-2 {
-    margin-top: 0.5rem !important;
+    margin-top: 0.5rem !'Cairo', sans-serif;
   }
   .mr-sm-2,
   .mx-sm-2 {
-    margin-right: 0.5rem !important;
+    margin-right: 0.5rem !'Cairo', sans-serif;
   }
   .mb-sm-2,
   .my-sm-2 {
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 0.5rem !'Cairo', sans-serif;
   }
   .ml-sm-2,
   .mx-sm-2 {
-    margin-left: 0.5rem !important;
+    margin-left: 0.5rem !'Cairo', sans-serif;
   }
   .m-sm-3 {
-    margin: 1rem !important;
+    margin: 1rem !'Cairo', sans-serif;
   }
   .mt-sm-3,
   .my-sm-3 {
-    margin-top: 1rem !important;
+    margin-top: 1rem !'Cairo', sans-serif;
   }
   .mr-sm-3,
   .mx-sm-3 {
-    margin-right: 1rem !important;
+    margin-right: 1rem !'Cairo', sans-serif;
   }
   .mb-sm-3,
   .my-sm-3 {
-    margin-bottom: 1rem !important;
+    margin-bottom: 1rem !'Cairo', sans-serif;
   }
   .ml-sm-3,
   .mx-sm-3 {
-    margin-left: 1rem !important;
+    margin-left: 1rem !'Cairo', sans-serif;
   }
   .m-sm-4 {
-    margin: 1.5rem !important;
+    margin: 1.5rem !'Cairo', sans-serif;
   }
   .mt-sm-4,
   .my-sm-4 {
-    margin-top: 1.5rem !important;
+    margin-top: 1.5rem !'Cairo', sans-serif;
   }
   .mr-sm-4,
   .mx-sm-4 {
-    margin-right: 1.5rem !important;
+    margin-right: 1.5rem !'Cairo', sans-serif;
   }
   .mb-sm-4,
   .my-sm-4 {
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 1.5rem !'Cairo', sans-serif;
   }
   .ml-sm-4,
   .mx-sm-4 {
-    margin-left: 1.5rem !important;
+    margin-left: 1.5rem !'Cairo', sans-serif;
   }
   .m-sm-5 {
-    margin: 3rem !important;
+    margin: 3rem !'Cairo', sans-serif;
   }
   .mt-sm-5,
   .my-sm-5 {
-    margin-top: 3rem !important;
+    margin-top: 3rem !'Cairo', sans-serif;
   }
   .mr-sm-5,
   .mx-sm-5 {
-    margin-right: 3rem !important;
+    margin-right: 3rem !'Cairo', sans-serif;
   }
   .mb-sm-5,
   .my-sm-5 {
-    margin-bottom: 3rem !important;
+    margin-bottom: 3rem !'Cairo', sans-serif;
   }
   .ml-sm-5,
   .mx-sm-5 {
-    margin-left: 3rem !important;
+    margin-left: 3rem !'Cairo', sans-serif;
   }
   .p-sm-0 {
-    padding: 0 !important;
+    padding: 0 !'Cairo', sans-serif;
   }
   .pt-sm-0,
   .py-sm-0 {
-    padding-top: 0 !important;
+    padding-top: 0 !'Cairo', sans-serif;
   }
   .pr-sm-0,
   .px-sm-0 {
-    padding-right: 0 !important;
+    padding-right: 0 !'Cairo', sans-serif;
   }
   .pb-sm-0,
   .py-sm-0 {
-    padding-bottom: 0 !important;
+    padding-bottom: 0 !'Cairo', sans-serif;
   }
   .pl-sm-0,
   .px-sm-0 {
-    padding-left: 0 !important;
+    padding-left: 0 !'Cairo', sans-serif;
   }
   .p-sm-1 {
-    padding: 0.25rem !important;
+    padding: 0.25rem !'Cairo', sans-serif;
   }
   .pt-sm-1,
   .py-sm-1 {
-    padding-top: 0.25rem !important;
+    padding-top: 0.25rem !'Cairo', sans-serif;
   }
   .pr-sm-1,
   .px-sm-1 {
-    padding-right: 0.25rem !important;
+    padding-right: 0.25rem !'Cairo', sans-serif;
   }
   .pb-sm-1,
   .py-sm-1 {
-    padding-bottom: 0.25rem !important;
+    padding-bottom: 0.25rem !'Cairo', sans-serif;
   }
   .pl-sm-1,
   .px-sm-1 {
-    padding-left: 0.25rem !important;
+    padding-left: 0.25rem !'Cairo', sans-serif;
   }
   .p-sm-2 {
-    padding: 0.5rem !important;
+    padding: 0.5rem !'Cairo', sans-serif;
   }
   .pt-sm-2,
   .py-sm-2 {
-    padding-top: 0.5rem !important;
+    padding-top: 0.5rem !'Cairo', sans-serif;
   }
   .pr-sm-2,
   .px-sm-2 {
-    padding-right: 0.5rem !important;
+    padding-right: 0.5rem !'Cairo', sans-serif;
   }
   .pb-sm-2,
   .py-sm-2 {
-    padding-bottom: 0.5rem !important;
+    padding-bottom: 0.5rem !'Cairo', sans-serif;
   }
   .pl-sm-2,
   .px-sm-2 {
-    padding-left: 0.5rem !important;
+    padding-left: 0.5rem !'Cairo', sans-serif;
   }
   .p-sm-3 {
-    padding: 1rem !important;
+    padding: 1rem !'Cairo', sans-serif;
   }
   .pt-sm-3,
   .py-sm-3 {
-    padding-top: 1rem !important;
+    padding-top: 1rem !'Cairo', sans-serif;
   }
   .pr-sm-3,
   .px-sm-3 {
-    padding-right: 1rem !important;
+    padding-right: 1rem !'Cairo', sans-serif;
   }
   .pb-sm-3,
   .py-sm-3 {
-    padding-bottom: 1rem !important;
+    padding-bottom: 1rem !'Cairo', sans-serif;
   }
   .pl-sm-3,
   .px-sm-3 {
-    padding-left: 1rem !important;
+    padding-left: 1rem !'Cairo', sans-serif;
   }
   .p-sm-4 {
-    padding: 1.5rem !important;
+    padding: 1.5rem !'Cairo', sans-serif;
   }
   .pt-sm-4,
   .py-sm-4 {
-    padding-top: 1.5rem !important;
+    padding-top: 1.5rem !'Cairo', sans-serif;
   }
   .pr-sm-4,
   .px-sm-4 {
-    padding-right: 1.5rem !important;
+    padding-right: 1.5rem !'Cairo', sans-serif;
   }
   .pb-sm-4,
   .py-sm-4 {
-    padding-bottom: 1.5rem !important;
+    padding-bottom: 1.5rem !'Cairo', sans-serif;
   }
   .pl-sm-4,
   .px-sm-4 {
-    padding-left: 1.5rem !important;
+    padding-left: 1.5rem !'Cairo', sans-serif;
   }
   .p-sm-5 {
-    padding: 3rem !important;
+    padding: 3rem !'Cairo', sans-serif;
   }
   .pt-sm-5,
   .py-sm-5 {
-    padding-top: 3rem !important;
+    padding-top: 3rem !'Cairo', sans-serif;
   }
   .pr-sm-5,
   .px-sm-5 {
-    padding-right: 3rem !important;
+    padding-right: 3rem !'Cairo', sans-serif;
   }
   .pb-sm-5,
   .py-sm-5 {
-    padding-bottom: 3rem !important;
+    padding-bottom: 3rem !'Cairo', sans-serif;
   }
   .pl-sm-5,
   .px-sm-5 {
-    padding-left: 3rem !important;
+    padding-left: 3rem !'Cairo', sans-serif;
   }
   .m-sm-n1 {
-    margin: -0.25rem !important;
+    margin: -0.25rem !'Cairo', sans-serif;
   }
   .mt-sm-n1,
   .my-sm-n1 {
-    margin-top: -0.25rem !important;
+    margin-top: -0.25rem !'Cairo', sans-serif;
   }
   .mr-sm-n1,
   .mx-sm-n1 {
-    margin-right: -0.25rem !important;
+    margin-right: -0.25rem !'Cairo', sans-serif;
   }
   .mb-sm-n1,
   .my-sm-n1 {
-    margin-bottom: -0.25rem !important;
+    margin-bottom: -0.25rem !'Cairo', sans-serif;
   }
   .ml-sm-n1,
   .mx-sm-n1 {
-    margin-left: -0.25rem !important;
+    margin-left: -0.25rem !'Cairo', sans-serif;
   }
   .m-sm-n2 {
-    margin: -0.5rem !important;
+    margin: -0.5rem !'Cairo', sans-serif;
   }
   .mt-sm-n2,
   .my-sm-n2 {
-    margin-top: -0.5rem !important;
+    margin-top: -0.5rem !'Cairo', sans-serif;
   }
   .mr-sm-n2,
   .mx-sm-n2 {
-    margin-right: -0.5rem !important;
+    margin-right: -0.5rem !'Cairo', sans-serif;
   }
   .mb-sm-n2,
   .my-sm-n2 {
-    margin-bottom: -0.5rem !important;
+    margin-bottom: -0.5rem !'Cairo', sans-serif;
   }
   .ml-sm-n2,
   .mx-sm-n2 {
-    margin-left: -0.5rem !important;
+    margin-left: -0.5rem !'Cairo', sans-serif;
   }
   .m-sm-n3 {
-    margin: -1rem !important;
+    margin: -1rem !'Cairo', sans-serif;
   }
   .mt-sm-n3,
   .my-sm-n3 {
-    margin-top: -1rem !important;
+    margin-top: -1rem !'Cairo', sans-serif;
   }
   .mr-sm-n3,
   .mx-sm-n3 {
-    margin-right: -1rem !important;
+    margin-right: -1rem !'Cairo', sans-serif;
   }
   .mb-sm-n3,
   .my-sm-n3 {
-    margin-bottom: -1rem !important;
+    margin-bottom: -1rem !'Cairo', sans-serif;
   }
   .ml-sm-n3,
   .mx-sm-n3 {
-    margin-left: -1rem !important;
+    margin-left: -1rem !'Cairo', sans-serif;
   }
   .m-sm-n4 {
-    margin: -1.5rem !important;
+    margin: -1.5rem !'Cairo', sans-serif;
   }
   .mt-sm-n4,
   .my-sm-n4 {
-    margin-top: -1.5rem !important;
+    margin-top: -1.5rem !'Cairo', sans-serif;
   }
   .mr-sm-n4,
   .mx-sm-n4 {
-    margin-right: -1.5rem !important;
+    margin-right: -1.5rem !'Cairo', sans-serif;
   }
   .mb-sm-n4,
   .my-sm-n4 {
-    margin-bottom: -1.5rem !important;
+    margin-bottom: -1.5rem !'Cairo', sans-serif;
   }
   .ml-sm-n4,
   .mx-sm-n4 {
-    margin-left: -1.5rem !important;
+    margin-left: -1.5rem !'Cairo', sans-serif;
   }
   .m-sm-n5 {
-    margin: -3rem !important;
+    margin: -3rem !'Cairo', sans-serif;
   }
   .mt-sm-n5,
   .my-sm-n5 {
-    margin-top: -3rem !important;
+    margin-top: -3rem !'Cairo', sans-serif;
   }
   .mr-sm-n5,
   .mx-sm-n5 {
-    margin-right: -3rem !important;
+    margin-right: -3rem !'Cairo', sans-serif;
   }
   .mb-sm-n5,
   .my-sm-n5 {
-    margin-bottom: -3rem !important;
+    margin-bottom: -3rem !'Cairo', sans-serif;
   }
   .ml-sm-n5,
   .mx-sm-n5 {
-    margin-left: -3rem !important;
+    margin-left: -3rem !'Cairo', sans-serif;
   }
   .m-sm-auto {
-    margin: auto !important;
+    margin: auto !'Cairo', sans-serif;
   }
   .mt-sm-auto,
   .my-sm-auto {
-    margin-top: auto !important;
+    margin-top: auto !'Cairo', sans-serif;
   }
   .mr-sm-auto,
   .mx-sm-auto {
-    margin-right: auto !important;
+    margin-right: auto !'Cairo', sans-serif;
   }
   .mb-sm-auto,
   .my-sm-auto {
-    margin-bottom: auto !important;
+    margin-bottom: auto !'Cairo', sans-serif;
   }
   .ml-sm-auto,
   .mx-sm-auto {
-    margin-left: auto !important;
+    margin-left: auto !'Cairo', sans-serif;
   }
 }
 
 @media (min-width: 768px) {
   .m-md-0 {
-    margin: 0 !important;
+    margin: 0 !'Cairo', sans-serif;
   }
   .mt-md-0,
   .my-md-0 {
-    margin-top: 0 !important;
+    margin-top: 0 !'Cairo', sans-serif;
   }
   .mr-md-0,
   .mx-md-0 {
-    margin-right: 0 !important;
+    margin-right: 0 !'Cairo', sans-serif;
   }
   .mb-md-0,
   .my-md-0 {
-    margin-bottom: 0 !important;
+    margin-bottom: 0 !'Cairo', sans-serif;
   }
   .ml-md-0,
   .mx-md-0 {
-    margin-left: 0 !important;
+    margin-left: 0 !'Cairo', sans-serif;
   }
   .m-md-1 {
-    margin: 0.25rem !important;
+    margin: 0.25rem !'Cairo', sans-serif;
   }
   .mt-md-1,
   .my-md-1 {
-    margin-top: 0.25rem !important;
+    margin-top: 0.25rem !'Cairo', sans-serif;
   }
   .mr-md-1,
   .mx-md-1 {
-    margin-right: 0.25rem !important;
+    margin-right: 0.25rem !'Cairo', sans-serif;
   }
   .mb-md-1,
   .my-md-1 {
-    margin-bottom: 0.25rem !important;
+    margin-bottom: 0.25rem !'Cairo', sans-serif;
   }
   .ml-md-1,
   .mx-md-1 {
-    margin-left: 0.25rem !important;
+    margin-left: 0.25rem !'Cairo', sans-serif;
   }
   .m-md-2 {
-    margin: 0.5rem !important;
+    margin: 0.5rem !'Cairo', sans-serif;
   }
   .mt-md-2,
   .my-md-2 {
-    margin-top: 0.5rem !important;
+    margin-top: 0.5rem !'Cairo', sans-serif;
   }
   .mr-md-2,
   .mx-md-2 {
-    margin-right: 0.5rem !important;
+    margin-right: 0.5rem !'Cairo', sans-serif;
   }
   .mb-md-2,
   .my-md-2 {
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 0.5rem !'Cairo', sans-serif;
   }
   .ml-md-2,
   .mx-md-2 {
-    margin-left: 0.5rem !important;
+    margin-left: 0.5rem !'Cairo', sans-serif;
   }
   .m-md-3 {
-    margin: 1rem !important;
+    margin: 1rem !'Cairo', sans-serif;
   }
   .mt-md-3,
   .my-md-3 {
-    margin-top: 1rem !important;
+    margin-top: 1rem !'Cairo', sans-serif;
   }
   .mr-md-3,
   .mx-md-3 {
-    margin-right: 1rem !important;
+    margin-right: 1rem !'Cairo', sans-serif;
   }
   .mb-md-3,
   .my-md-3 {
-    margin-bottom: 1rem !important;
+    margin-bottom: 1rem !'Cairo', sans-serif;
   }
   .ml-md-3,
   .mx-md-3 {
-    margin-left: 1rem !important;
+    margin-left: 1rem !'Cairo', sans-serif;
   }
   .m-md-4 {
-    margin: 1.5rem !important;
+    margin: 1.5rem !'Cairo', sans-serif;
   }
   .mt-md-4,
   .my-md-4 {
-    margin-top: 1.5rem !important;
+    margin-top: 1.5rem !'Cairo', sans-serif;
   }
   .mr-md-4,
   .mx-md-4 {
-    margin-right: 1.5rem !important;
+    margin-right: 1.5rem !'Cairo', sans-serif;
   }
   .mb-md-4,
   .my-md-4 {
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 1.5rem !'Cairo', sans-serif;
   }
   .ml-md-4,
   .mx-md-4 {
-    margin-left: 1.5rem !important;
+    margin-left: 1.5rem !'Cairo', sans-serif;
   }
   .m-md-5 {
-    margin: 3rem !important;
+    margin: 3rem !'Cairo', sans-serif;
   }
   .mt-md-5,
   .my-md-5 {
-    margin-top: 3rem !important;
+    margin-top: 3rem !'Cairo', sans-serif;
   }
   .mr-md-5,
   .mx-md-5 {
-    margin-right: 3rem !important;
+    margin-right: 3rem !'Cairo', sans-serif;
   }
   .mb-md-5,
   .my-md-5 {
-    margin-bottom: 3rem !important;
+    margin-bottom: 3rem !'Cairo', sans-serif;
   }
   .ml-md-5,
   .mx-md-5 {
-    margin-left: 3rem !important;
+    margin-left: 3rem !'Cairo', sans-serif;
   }
   .p-md-0 {
-    padding: 0 !important;
+    padding: 0 !'Cairo', sans-serif;
   }
   .pt-md-0,
   .py-md-0 {
-    padding-top: 0 !important;
+    padding-top: 0 !'Cairo', sans-serif;
   }
   .pr-md-0,
   .px-md-0 {
-    padding-right: 0 !important;
+    padding-right: 0 !'Cairo', sans-serif;
   }
   .pb-md-0,
   .py-md-0 {
-    padding-bottom: 0 !important;
+    padding-bottom: 0 !'Cairo', sans-serif;
   }
   .pl-md-0,
   .px-md-0 {
-    padding-left: 0 !important;
+    padding-left: 0 !'Cairo', sans-serif;
   }
   .p-md-1 {
-    padding: 0.25rem !important;
+    padding: 0.25rem !'Cairo', sans-serif;
   }
   .pt-md-1,
   .py-md-1 {
-    padding-top: 0.25rem !important;
+    padding-top: 0.25rem !'Cairo', sans-serif;
   }
   .pr-md-1,
   .px-md-1 {
-    padding-right: 0.25rem !important;
+    padding-right: 0.25rem !'Cairo', sans-serif;
   }
   .pb-md-1,
   .py-md-1 {
-    padding-bottom: 0.25rem !important;
+    padding-bottom: 0.25rem !'Cairo', sans-serif;
   }
   .pl-md-1,
   .px-md-1 {
-    padding-left: 0.25rem !important;
+    padding-left: 0.25rem !'Cairo', sans-serif;
   }
   .p-md-2 {
-    padding: 0.5rem !important;
+    padding: 0.5rem !'Cairo', sans-serif;
   }
   .pt-md-2,
   .py-md-2 {
-    padding-top: 0.5rem !important;
+    padding-top: 0.5rem !'Cairo', sans-serif;
   }
   .pr-md-2,
   .px-md-2 {
-    padding-right: 0.5rem !important;
+    padding-right: 0.5rem !'Cairo', sans-serif;
   }
   .pb-md-2,
   .py-md-2 {
-    padding-bottom: 0.5rem !important;
+    padding-bottom: 0.5rem !'Cairo', sans-serif;
   }
   .pl-md-2,
   .px-md-2 {
-    padding-left: 0.5rem !important;
+    padding-left: 0.5rem !'Cairo', sans-serif;
   }
   .p-md-3 {
-    padding: 1rem !important;
+    padding: 1rem !'Cairo', sans-serif;
   }
   .pt-md-3,
   .py-md-3 {
-    padding-top: 1rem !important;
+    padding-top: 1rem !'Cairo', sans-serif;
   }
   .pr-md-3,
   .px-md-3 {
-    padding-right: 1rem !important;
+    padding-right: 1rem !'Cairo', sans-serif;
   }
   .pb-md-3,
   .py-md-3 {
-    padding-bottom: 1rem !important;
+    padding-bottom: 1rem !'Cairo', sans-serif;
   }
   .pl-md-3,
   .px-md-3 {
-    padding-left: 1rem !important;
+    padding-left: 1rem !'Cairo', sans-serif;
   }
   .p-md-4 {
-    padding: 1.5rem !important;
+    padding: 1.5rem !'Cairo', sans-serif;
   }
   .pt-md-4,
   .py-md-4 {
-    padding-top: 1.5rem !important;
+    padding-top: 1.5rem !'Cairo', sans-serif;
   }
   .pr-md-4,
   .px-md-4 {
-    padding-right: 1.5rem !important;
+    padding-right: 1.5rem !'Cairo', sans-serif;
   }
   .pb-md-4,
   .py-md-4 {
-    padding-bottom: 1.5rem !important;
+    padding-bottom: 1.5rem !'Cairo', sans-serif;
   }
   .pl-md-4,
   .px-md-4 {
-    padding-left: 1.5rem !important;
+    padding-left: 1.5rem !'Cairo', sans-serif;
   }
   .p-md-5 {
-    padding: 3rem !important;
+    padding: 3rem !'Cairo', sans-serif;
   }
   .pt-md-5,
   .py-md-5 {
-    padding-top: 3rem !important;
+    padding-top: 3rem !'Cairo', sans-serif;
   }
   .pr-md-5,
   .px-md-5 {
-    padding-right: 3rem !important;
+    padding-right: 3rem !'Cairo', sans-serif;
   }
   .pb-md-5,
   .py-md-5 {
-    padding-bottom: 3rem !important;
+    padding-bottom: 3rem !'Cairo', sans-serif;
   }
   .pl-md-5,
   .px-md-5 {
-    padding-left: 3rem !important;
+    padding-left: 3rem !'Cairo', sans-serif;
   }
   .m-md-n1 {
-    margin: -0.25rem !important;
+    margin: -0.25rem !'Cairo', sans-serif;
   }
   .mt-md-n1,
   .my-md-n1 {
-    margin-top: -0.25rem !important;
+    margin-top: -0.25rem !'Cairo', sans-serif;
   }
   .mr-md-n1,
   .mx-md-n1 {
-    margin-right: -0.25rem !important;
+    margin-right: -0.25rem !'Cairo', sans-serif;
   }
   .mb-md-n1,
   .my-md-n1 {
-    margin-bottom: -0.25rem !important;
+    margin-bottom: -0.25rem !'Cairo', sans-serif;
   }
   .ml-md-n1,
   .mx-md-n1 {
-    margin-left: -0.25rem !important;
+    margin-left: -0.25rem !'Cairo', sans-serif;
   }
   .m-md-n2 {
-    margin: -0.5rem !important;
+    margin: -0.5rem !'Cairo', sans-serif;
   }
   .mt-md-n2,
   .my-md-n2 {
-    margin-top: -0.5rem !important;
+    margin-top: -0.5rem !'Cairo', sans-serif;
   }
   .mr-md-n2,
   .mx-md-n2 {
-    margin-right: -0.5rem !important;
+    margin-right: -0.5rem !'Cairo', sans-serif;
   }
   .mb-md-n2,
   .my-md-n2 {
-    margin-bottom: -0.5rem !important;
+    margin-bottom: -0.5rem !'Cairo', sans-serif;
   }
   .ml-md-n2,
   .mx-md-n2 {
-    margin-left: -0.5rem !important;
+    margin-left: -0.5rem !'Cairo', sans-serif;
   }
   .m-md-n3 {
-    margin: -1rem !important;
+    margin: -1rem !'Cairo', sans-serif;
   }
   .mt-md-n3,
   .my-md-n3 {
-    margin-top: -1rem !important;
+    margin-top: -1rem !'Cairo', sans-serif;
   }
   .mr-md-n3,
   .mx-md-n3 {
-    margin-right: -1rem !important;
+    margin-right: -1rem !'Cairo', sans-serif;
   }
   .mb-md-n3,
   .my-md-n3 {
-    margin-bottom: -1rem !important;
+    margin-bottom: -1rem !'Cairo', sans-serif;
   }
   .ml-md-n3,
   .mx-md-n3 {
-    margin-left: -1rem !important;
+    margin-left: -1rem !'Cairo', sans-serif;
   }
   .m-md-n4 {
-    margin: -1.5rem !important;
+    margin: -1.5rem !'Cairo', sans-serif;
   }
   .mt-md-n4,
   .my-md-n4 {
-    margin-top: -1.5rem !important;
+    margin-top: -1.5rem !'Cairo', sans-serif;
   }
   .mr-md-n4,
   .mx-md-n4 {
-    margin-right: -1.5rem !important;
+    margin-right: -1.5rem !'Cairo', sans-serif;
   }
   .mb-md-n4,
   .my-md-n4 {
-    margin-bottom: -1.5rem !important;
+    margin-bottom: -1.5rem !'Cairo', sans-serif;
   }
   .ml-md-n4,
   .mx-md-n4 {
-    margin-left: -1.5rem !important;
+    margin-left: -1.5rem !'Cairo', sans-serif;
   }
   .m-md-n5 {
-    margin: -3rem !important;
+    margin: -3rem !'Cairo', sans-serif;
   }
   .mt-md-n5,
   .my-md-n5 {
-    margin-top: -3rem !important;
+    margin-top: -3rem !'Cairo', sans-serif;
   }
   .mr-md-n5,
   .mx-md-n5 {
-    margin-right: -3rem !important;
+    margin-right: -3rem !'Cairo', sans-serif;
   }
   .mb-md-n5,
   .my-md-n5 {
-    margin-bottom: -3rem !important;
+    margin-bottom: -3rem !'Cairo', sans-serif;
   }
   .ml-md-n5,
   .mx-md-n5 {
-    margin-left: -3rem !important;
+    margin-left: -3rem !'Cairo', sans-serif;
   }
   .m-md-auto {
-    margin: auto !important;
+    margin: auto !'Cairo', sans-serif;
   }
   .mt-md-auto,
   .my-md-auto {
-    margin-top: auto !important;
+    margin-top: auto !'Cairo', sans-serif;
   }
   .mr-md-auto,
   .mx-md-auto {
-    margin-right: auto !important;
+    margin-right: auto !'Cairo', sans-serif;
   }
   .mb-md-auto,
   .my-md-auto {
-    margin-bottom: auto !important;
+    margin-bottom: auto !'Cairo', sans-serif;
   }
   .ml-md-auto,
   .mx-md-auto {
-    margin-left: auto !important;
+    margin-left: auto !'Cairo', sans-serif;
   }
 }
 
 @media (min-width: 992px) {
   .m-lg-0 {
-    margin: 0 !important;
+    margin: 0 !'Cairo', sans-serif;
   }
   .mt-lg-0,
   .my-lg-0 {
-    margin-top: 0 !important;
+    margin-top: 0 !'Cairo', sans-serif;
   }
   .mr-lg-0,
   .mx-lg-0 {
-    margin-right: 0 !important;
+    margin-right: 0 !'Cairo', sans-serif;
   }
   .mb-lg-0,
   .my-lg-0 {
-    margin-bottom: 0 !important;
+    margin-bottom: 0 !'Cairo', sans-serif;
   }
   .ml-lg-0,
   .mx-lg-0 {
-    margin-left: 0 !important;
+    margin-left: 0 !'Cairo', sans-serif;
   }
   .m-lg-1 {
-    margin: 0.25rem !important;
+    margin: 0.25rem !'Cairo', sans-serif;
   }
   .mt-lg-1,
   .my-lg-1 {
-    margin-top: 0.25rem !important;
+    margin-top: 0.25rem !'Cairo', sans-serif;
   }
   .mr-lg-1,
   .mx-lg-1 {
-    margin-right: 0.25rem !important;
+    margin-right: 0.25rem !'Cairo', sans-serif;
   }
   .mb-lg-1,
   .my-lg-1 {
-    margin-bottom: 0.25rem !important;
+    margin-bottom: 0.25rem !'Cairo', sans-serif;
   }
   .ml-lg-1,
   .mx-lg-1 {
-    margin-left: 0.25rem !important;
+    margin-left: 0.25rem !'Cairo', sans-serif;
   }
   .m-lg-2 {
-    margin: 0.5rem !important;
+    margin: 0.5rem !'Cairo', sans-serif;
   }
   .mt-lg-2,
   .my-lg-2 {
-    margin-top: 0.5rem !important;
+    margin-top: 0.5rem !'Cairo', sans-serif;
   }
   .mr-lg-2,
   .mx-lg-2 {
-    margin-right: 0.5rem !important;
+    margin-right: 0.5rem !'Cairo', sans-serif;
   }
   .mb-lg-2,
   .my-lg-2 {
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 0.5rem !'Cairo', sans-serif;
   }
   .ml-lg-2,
   .mx-lg-2 {
-    margin-left: 0.5rem !important;
+    margin-left: 0.5rem !'Cairo', sans-serif;
   }
   .m-lg-3 {
-    margin: 1rem !important;
+    margin: 1rem !'Cairo', sans-serif;
   }
   .mt-lg-3,
   .my-lg-3 {
-    margin-top: 1rem !important;
+    margin-top: 1rem !'Cairo', sans-serif;
   }
   .mr-lg-3,
   .mx-lg-3 {
-    margin-right: 1rem !important;
+    margin-right: 1rem !'Cairo', sans-serif;
   }
   .mb-lg-3,
   .my-lg-3 {
-    margin-bottom: 1rem !important;
+    margin-bottom: 1rem !'Cairo', sans-serif;
   }
   .ml-lg-3,
   .mx-lg-3 {
-    margin-left: 1rem !important;
+    margin-left: 1rem !'Cairo', sans-serif;
   }
   .m-lg-4 {
-    margin: 1.5rem !important;
+    margin: 1.5rem !'Cairo', sans-serif;
   }
   .mt-lg-4,
   .my-lg-4 {
-    margin-top: 1.5rem !important;
+    margin-top: 1.5rem !'Cairo', sans-serif;
   }
   .mr-lg-4,
   .mx-lg-4 {
-    margin-right: 1.5rem !important;
+    margin-right: 1.5rem !'Cairo', sans-serif;
   }
   .mb-lg-4,
   .my-lg-4 {
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 1.5rem !'Cairo', sans-serif;
   }
   .ml-lg-4,
   .mx-lg-4 {
-    margin-left: 1.5rem !important;
+    margin-left: 1.5rem !'Cairo', sans-serif;
   }
   .m-lg-5 {
-    margin: 3rem !important;
+    margin: 3rem !'Cairo', sans-serif;
   }
   .mt-lg-5,
   .my-lg-5 {
-    margin-top: 3rem !important;
+    margin-top: 3rem !'Cairo', sans-serif;
   }
   .mr-lg-5,
   .mx-lg-5 {
-    margin-right: 3rem !important;
+    margin-right: 3rem !'Cairo', sans-serif;
   }
   .mb-lg-5,
   .my-lg-5 {
-    margin-bottom: 3rem !important;
+    margin-bottom: 3rem !'Cairo', sans-serif;
   }
   .ml-lg-5,
   .mx-lg-5 {
-    margin-left: 3rem !important;
+    margin-left: 3rem !'Cairo', sans-serif;
   }
   .p-lg-0 {
-    padding: 0 !important;
+    padding: 0 !'Cairo', sans-serif;
   }
   .pt-lg-0,
   .py-lg-0 {
-    padding-top: 0 !important;
+    padding-top: 0 !'Cairo', sans-serif;
   }
   .pr-lg-0,
   .px-lg-0 {
-    padding-right: 0 !important;
+    padding-right: 0 !'Cairo', sans-serif;
   }
   .pb-lg-0,
   .py-lg-0 {
-    padding-bottom: 0 !important;
+    padding-bottom: 0 !'Cairo', sans-serif;
   }
   .pl-lg-0,
   .px-lg-0 {
-    padding-left: 0 !important;
+    padding-left: 0 !'Cairo', sans-serif;
   }
   .p-lg-1 {
-    padding: 0.25rem !important;
+    padding: 0.25rem !'Cairo', sans-serif;
   }
   .pt-lg-1,
   .py-lg-1 {
-    padding-top: 0.25rem !important;
+    padding-top: 0.25rem !'Cairo', sans-serif;
   }
   .pr-lg-1,
   .px-lg-1 {
-    padding-right: 0.25rem !important;
+    padding-right: 0.25rem !'Cairo', sans-serif;
   }
   .pb-lg-1,
   .py-lg-1 {
-    padding-bottom: 0.25rem !important;
+    padding-bottom: 0.25rem !'Cairo', sans-serif;
   }
   .pl-lg-1,
   .px-lg-1 {
-    padding-left: 0.25rem !important;
+    padding-left: 0.25rem !'Cairo', sans-serif;
   }
   .p-lg-2 {
-    padding: 0.5rem !important;
+    padding: 0.5rem !'Cairo', sans-serif;
   }
   .pt-lg-2,
   .py-lg-2 {
-    padding-top: 0.5rem !important;
+    padding-top: 0.5rem !'Cairo', sans-serif;
   }
   .pr-lg-2,
   .px-lg-2 {
-    padding-right: 0.5rem !important;
+    padding-right: 0.5rem !'Cairo', sans-serif;
   }
   .pb-lg-2,
   .py-lg-2 {
-    padding-bottom: 0.5rem !important;
+    padding-bottom: 0.5rem !'Cairo', sans-serif;
   }
   .pl-lg-2,
   .px-lg-2 {
-    padding-left: 0.5rem !important;
+    padding-left: 0.5rem !'Cairo', sans-serif;
   }
   .p-lg-3 {
-    padding: 1rem !important;
+    padding: 1rem !'Cairo', sans-serif;
   }
   .pt-lg-3,
   .py-lg-3 {
-    padding-top: 1rem !important;
+    padding-top: 1rem !'Cairo', sans-serif;
   }
   .pr-lg-3,
   .px-lg-3 {
-    padding-right: 1rem !important;
+    padding-right: 1rem !'Cairo', sans-serif;
   }
   .pb-lg-3,
   .py-lg-3 {
-    padding-bottom: 1rem !important;
+    padding-bottom: 1rem !'Cairo', sans-serif;
   }
   .pl-lg-3,
   .px-lg-3 {
-    padding-left: 1rem !important;
+    padding-left: 1rem !'Cairo', sans-serif;
   }
   .p-lg-4 {
-    padding: 1.5rem !important;
+    padding: 1.5rem !'Cairo', sans-serif;
   }
   .pt-lg-4,
   .py-lg-4 {
-    padding-top: 1.5rem !important;
+    padding-top: 1.5rem !'Cairo', sans-serif;
   }
   .pr-lg-4,
   .px-lg-4 {
-    padding-right: 1.5rem !important;
+    padding-right: 1.5rem !'Cairo', sans-serif;
   }
   .pb-lg-4,
   .py-lg-4 {
-    padding-bottom: 1.5rem !important;
+    padding-bottom: 1.5rem !'Cairo', sans-serif;
   }
   .pl-lg-4,
   .px-lg-4 {
-    padding-left: 1.5rem !important;
+    padding-left: 1.5rem !'Cairo', sans-serif;
   }
   .p-lg-5 {
-    padding: 3rem !important;
+    padding: 3rem !'Cairo', sans-serif;
   }
   .pt-lg-5,
   .py-lg-5 {
-    padding-top: 3rem !important;
+    padding-top: 3rem !'Cairo', sans-serif;
   }
   .pr-lg-5,
   .px-lg-5 {
-    padding-right: 3rem !important;
+    padding-right: 3rem !'Cairo', sans-serif;
   }
   .pb-lg-5,
   .py-lg-5 {
-    padding-bottom: 3rem !important;
+    padding-bottom: 3rem !'Cairo', sans-serif;
   }
   .pl-lg-5,
   .px-lg-5 {
-    padding-left: 3rem !important;
+    padding-left: 3rem !'Cairo', sans-serif;
   }
   .m-lg-n1 {
-    margin: -0.25rem !important;
+    margin: -0.25rem !'Cairo', sans-serif;
   }
   .mt-lg-n1,
   .my-lg-n1 {
-    margin-top: -0.25rem !important;
+    margin-top: -0.25rem !'Cairo', sans-serif;
   }
   .mr-lg-n1,
   .mx-lg-n1 {
-    margin-right: -0.25rem !important;
+    margin-right: -0.25rem !'Cairo', sans-serif;
   }
   .mb-lg-n1,
   .my-lg-n1 {
-    margin-bottom: -0.25rem !important;
+    margin-bottom: -0.25rem !'Cairo', sans-serif;
   }
   .ml-lg-n1,
   .mx-lg-n1 {
-    margin-left: -0.25rem !important;
+    margin-left: -0.25rem !'Cairo', sans-serif;
   }
   .m-lg-n2 {
-    margin: -0.5rem !important;
+    margin: -0.5rem !'Cairo', sans-serif;
   }
   .mt-lg-n2,
   .my-lg-n2 {
-    margin-top: -0.5rem !important;
+    margin-top: -0.5rem !'Cairo', sans-serif;
   }
   .mr-lg-n2,
   .mx-lg-n2 {
-    margin-right: -0.5rem !important;
+    margin-right: -0.5rem !'Cairo', sans-serif;
   }
   .mb-lg-n2,
   .my-lg-n2 {
-    margin-bottom: -0.5rem !important;
+    margin-bottom: -0.5rem !'Cairo', sans-serif;
   }
   .ml-lg-n2,
   .mx-lg-n2 {
-    margin-left: -0.5rem !important;
+    margin-left: -0.5rem !'Cairo', sans-serif;
   }
   .m-lg-n3 {
-    margin: -1rem !important;
+    margin: -1rem !'Cairo', sans-serif;
   }
   .mt-lg-n3,
   .my-lg-n3 {
-    margin-top: -1rem !important;
+    margin-top: -1rem !'Cairo', sans-serif;
   }
   .mr-lg-n3,
   .mx-lg-n3 {
-    margin-right: -1rem !important;
+    margin-right: -1rem !'Cairo', sans-serif;
   }
   .mb-lg-n3,
   .my-lg-n3 {
-    margin-bottom: -1rem !important;
+    margin-bottom: -1rem !'Cairo', sans-serif;
   }
   .ml-lg-n3,
   .mx-lg-n3 {
-    margin-left: -1rem !important;
+    margin-left: -1rem !'Cairo', sans-serif;
   }
   .m-lg-n4 {
-    margin: -1.5rem !important;
+    margin: -1.5rem !'Cairo', sans-serif;
   }
   .mt-lg-n4,
   .my-lg-n4 {
-    margin-top: -1.5rem !important;
+    margin-top: -1.5rem !'Cairo', sans-serif;
   }
   .mr-lg-n4,
   .mx-lg-n4 {
-    margin-right: -1.5rem !important;
+    margin-right: -1.5rem !'Cairo', sans-serif;
   }
   .mb-lg-n4,
   .my-lg-n4 {
-    margin-bottom: -1.5rem !important;
+    margin-bottom: -1.5rem !'Cairo', sans-serif;
   }
   .ml-lg-n4,
   .mx-lg-n4 {
-    margin-left: -1.5rem !important;
+    margin-left: -1.5rem !'Cairo', sans-serif;
   }
   .m-lg-n5 {
-    margin: -3rem !important;
+    margin: -3rem !'Cairo', sans-serif;
   }
   .mt-lg-n5,
   .my-lg-n5 {
-    margin-top: -3rem !important;
+    margin-top: -3rem !'Cairo', sans-serif;
   }
   .mr-lg-n5,
   .mx-lg-n5 {
-    margin-right: -3rem !important;
+    margin-right: -3rem !'Cairo', sans-serif;
   }
   .mb-lg-n5,
   .my-lg-n5 {
-    margin-bottom: -3rem !important;
+    margin-bottom: -3rem !'Cairo', sans-serif;
   }
   .ml-lg-n5,
   .mx-lg-n5 {
-    margin-left: -3rem !important;
+    margin-left: -3rem !'Cairo', sans-serif;
   }
   .m-lg-auto {
-    margin: auto !important;
+    margin: auto !'Cairo', sans-serif;
   }
   .mt-lg-auto,
   .my-lg-auto {
-    margin-top: auto !important;
+    margin-top: auto !'Cairo', sans-serif;
   }
   .mr-lg-auto,
   .mx-lg-auto {
-    margin-right: auto !important;
+    margin-right: auto !'Cairo', sans-serif;
   }
   .mb-lg-auto,
   .my-lg-auto {
-    margin-bottom: auto !important;
+    margin-bottom: auto !'Cairo', sans-serif;
   }
   .ml-lg-auto,
   .mx-lg-auto {
-    margin-left: auto !important;
+    margin-left: auto !'Cairo', sans-serif;
   }
 }
 
 @media (min-width: 1200px) {
   .m-xl-0 {
-    margin: 0 !important;
+    margin: 0 !'Cairo', sans-serif;
   }
   .mt-xl-0,
   .my-xl-0 {
-    margin-top: 0 !important;
+    margin-top: 0 !'Cairo', sans-serif;
   }
   .mr-xl-0,
   .mx-xl-0 {
-    margin-right: 0 !important;
+    margin-right: 0 !'Cairo', sans-serif;
   }
   .mb-xl-0,
   .my-xl-0 {
-    margin-bottom: 0 !important;
+    margin-bottom: 0 !'Cairo', sans-serif;
   }
   .ml-xl-0,
   .mx-xl-0 {
-    margin-left: 0 !important;
+    margin-left: 0 !'Cairo', sans-serif;
   }
   .m-xl-1 {
-    margin: 0.25rem !important;
+    margin: 0.25rem !'Cairo', sans-serif;
   }
   .mt-xl-1,
   .my-xl-1 {
-    margin-top: 0.25rem !important;
+    margin-top: 0.25rem !'Cairo', sans-serif;
   }
   .mr-xl-1,
   .mx-xl-1 {
-    margin-right: 0.25rem !important;
+    margin-right: 0.25rem !'Cairo', sans-serif;
   }
   .mb-xl-1,
   .my-xl-1 {
-    margin-bottom: 0.25rem !important;
+    margin-bottom: 0.25rem !'Cairo', sans-serif;
   }
   .ml-xl-1,
   .mx-xl-1 {
-    margin-left: 0.25rem !important;
+    margin-left: 0.25rem !'Cairo', sans-serif;
   }
   .m-xl-2 {
-    margin: 0.5rem !important;
+    margin: 0.5rem !'Cairo', sans-serif;
   }
   .mt-xl-2,
   .my-xl-2 {
-    margin-top: 0.5rem !important;
+    margin-top: 0.5rem !'Cairo', sans-serif;
   }
   .mr-xl-2,
   .mx-xl-2 {
-    margin-right: 0.5rem !important;
+    margin-right: 0.5rem !'Cairo', sans-serif;
   }
   .mb-xl-2,
   .my-xl-2 {
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 0.5rem !'Cairo', sans-serif;
   }
   .ml-xl-2,
   .mx-xl-2 {
-    margin-left: 0.5rem !important;
+    margin-left: 0.5rem !'Cairo', sans-serif;
   }
   .m-xl-3 {
-    margin: 1rem !important;
+    margin: 1rem !'Cairo', sans-serif;
   }
   .mt-xl-3,
   .my-xl-3 {
-    margin-top: 1rem !important;
+    margin-top: 1rem !'Cairo', sans-serif;
   }
   .mr-xl-3,
   .mx-xl-3 {
-    margin-right: 1rem !important;
+    margin-right: 1rem !'Cairo', sans-serif;
   }
   .mb-xl-3,
   .my-xl-3 {
-    margin-bottom: 1rem !important;
+    margin-bottom: 1rem !'Cairo', sans-serif;
   }
   .ml-xl-3,
   .mx-xl-3 {
-    margin-left: 1rem !important;
+    margin-left: 1rem !'Cairo', sans-serif;
   }
   .m-xl-4 {
-    margin: 1.5rem !important;
+    margin: 1.5rem !'Cairo', sans-serif;
   }
   .mt-xl-4,
   .my-xl-4 {
-    margin-top: 1.5rem !important;
+    margin-top: 1.5rem !'Cairo', sans-serif;
   }
   .mr-xl-4,
   .mx-xl-4 {
-    margin-right: 1.5rem !important;
+    margin-right: 1.5rem !'Cairo', sans-serif;
   }
   .mb-xl-4,
   .my-xl-4 {
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 1.5rem !'Cairo', sans-serif;
   }
   .ml-xl-4,
   .mx-xl-4 {
-    margin-left: 1.5rem !important;
+    margin-left: 1.5rem !'Cairo', sans-serif;
   }
   .m-xl-5 {
-    margin: 3rem !important;
+    margin: 3rem !'Cairo', sans-serif;
   }
   .mt-xl-5,
   .my-xl-5 {
-    margin-top: 3rem !important;
+    margin-top: 3rem !'Cairo', sans-serif;
   }
   .mr-xl-5,
   .mx-xl-5 {
-    margin-right: 3rem !important;
+    margin-right: 3rem !'Cairo', sans-serif;
   }
   .mb-xl-5,
   .my-xl-5 {
-    margin-bottom: 3rem !important;
+    margin-bottom: 3rem !'Cairo', sans-serif;
   }
   .ml-xl-5,
   .mx-xl-5 {
-    margin-left: 3rem !important;
+    margin-left: 3rem !'Cairo', sans-serif;
   }
   .p-xl-0 {
-    padding: 0 !important;
+    padding: 0 !'Cairo', sans-serif;
   }
   .pt-xl-0,
   .py-xl-0 {
-    padding-top: 0 !important;
+    padding-top: 0 !'Cairo', sans-serif;
   }
   .pr-xl-0,
   .px-xl-0 {
-    padding-right: 0 !important;
+    padding-right: 0 !'Cairo', sans-serif;
   }
   .pb-xl-0,
   .py-xl-0 {
-    padding-bottom: 0 !important;
+    padding-bottom: 0 !'Cairo', sans-serif;
   }
   .pl-xl-0,
   .px-xl-0 {
-    padding-left: 0 !important;
+    padding-left: 0 !'Cairo', sans-serif;
   }
   .p-xl-1 {
-    padding: 0.25rem !important;
+    padding: 0.25rem !'Cairo', sans-serif;
   }
   .pt-xl-1,
   .py-xl-1 {
-    padding-top: 0.25rem !important;
+    padding-top: 0.25rem !'Cairo', sans-serif;
   }
   .pr-xl-1,
   .px-xl-1 {
-    padding-right: 0.25rem !important;
+    padding-right: 0.25rem !'Cairo', sans-serif;
   }
   .pb-xl-1,
   .py-xl-1 {
-    padding-bottom: 0.25rem !important;
+    padding-bottom: 0.25rem !'Cairo', sans-serif;
   }
   .pl-xl-1,
   .px-xl-1 {
-    padding-left: 0.25rem !important;
+    padding-left: 0.25rem !'Cairo', sans-serif;
   }
   .p-xl-2 {
-    padding: 0.5rem !important;
+    padding: 0.5rem !'Cairo', sans-serif;
   }
   .pt-xl-2,
   .py-xl-2 {
-    padding-top: 0.5rem !important;
+    padding-top: 0.5rem !'Cairo', sans-serif;
   }
   .pr-xl-2,
   .px-xl-2 {
-    padding-right: 0.5rem !important;
+    padding-right: 0.5rem !'Cairo', sans-serif;
   }
   .pb-xl-2,
   .py-xl-2 {
-    padding-bottom: 0.5rem !important;
+    padding-bottom: 0.5rem !'Cairo', sans-serif;
   }
   .pl-xl-2,
   .px-xl-2 {
-    padding-left: 0.5rem !important;
+    padding-left: 0.5rem !'Cairo', sans-serif;
   }
   .p-xl-3 {
-    padding: 1rem !important;
+    padding: 1rem !'Cairo', sans-serif;
   }
   .pt-xl-3,
   .py-xl-3 {
-    padding-top: 1rem !important;
+    padding-top: 1rem !'Cairo', sans-serif;
   }
   .pr-xl-3,
   .px-xl-3 {
-    padding-right: 1rem !important;
+    padding-right: 1rem !'Cairo', sans-serif;
   }
   .pb-xl-3,
   .py-xl-3 {
-    padding-bottom: 1rem !important;
+    padding-bottom: 1rem !'Cairo', sans-serif;
   }
   .pl-xl-3,
   .px-xl-3 {
-    padding-left: 1rem !important;
+    padding-left: 1rem !'Cairo', sans-serif;
   }
   .p-xl-4 {
-    padding: 1.5rem !important;
+    padding: 1.5rem !'Cairo', sans-serif;
   }
   .pt-xl-4,
   .py-xl-4 {
-    padding-top: 1.5rem !important;
+    padding-top: 1.5rem !'Cairo', sans-serif;
   }
   .pr-xl-4,
   .px-xl-4 {
-    padding-right: 1.5rem !important;
+    padding-right: 1.5rem !'Cairo', sans-serif;
   }
   .pb-xl-4,
   .py-xl-4 {
-    padding-bottom: 1.5rem !important;
+    padding-bottom: 1.5rem !'Cairo', sans-serif;
   }
   .pl-xl-4,
   .px-xl-4 {
-    padding-left: 1.5rem !important;
+    padding-left: 1.5rem !'Cairo', sans-serif;
   }
   .p-xl-5 {
-    padding: 3rem !important;
+    padding: 3rem !'Cairo', sans-serif;
   }
   .pt-xl-5,
   .py-xl-5 {
-    padding-top: 3rem !important;
+    padding-top: 3rem !'Cairo', sans-serif;
   }
   .pr-xl-5,
   .px-xl-5 {
-    padding-right: 3rem !important;
+    padding-right: 3rem !'Cairo', sans-serif;
   }
   .pb-xl-5,
   .py-xl-5 {
-    padding-bottom: 3rem !important;
+    padding-bottom: 3rem !'Cairo', sans-serif;
   }
   .pl-xl-5,
   .px-xl-5 {
-    padding-left: 3rem !important;
+    padding-left: 3rem !'Cairo', sans-serif;
   }
   .m-xl-n1 {
-    margin: -0.25rem !important;
+    margin: -0.25rem !'Cairo', sans-serif;
   }
   .mt-xl-n1,
   .my-xl-n1 {
-    margin-top: -0.25rem !important;
+    margin-top: -0.25rem !'Cairo', sans-serif;
   }
   .mr-xl-n1,
   .mx-xl-n1 {
-    margin-right: -0.25rem !important;
+    margin-right: -0.25rem !'Cairo', sans-serif;
   }
   .mb-xl-n1,
   .my-xl-n1 {
-    margin-bottom: -0.25rem !important;
+    margin-bottom: -0.25rem !'Cairo', sans-serif;
   }
   .ml-xl-n1,
   .mx-xl-n1 {
-    margin-left: -0.25rem !important;
+    margin-left: -0.25rem !'Cairo', sans-serif;
   }
   .m-xl-n2 {
-    margin: -0.5rem !important;
+    margin: -0.5rem !'Cairo', sans-serif;
   }
   .mt-xl-n2,
   .my-xl-n2 {
-    margin-top: -0.5rem !important;
+    margin-top: -0.5rem !'Cairo', sans-serif;
   }
   .mr-xl-n2,
   .mx-xl-n2 {
-    margin-right: -0.5rem !important;
+    margin-right: -0.5rem !'Cairo', sans-serif;
   }
   .mb-xl-n2,
   .my-xl-n2 {
-    margin-bottom: -0.5rem !important;
+    margin-bottom: -0.5rem !'Cairo', sans-serif;
   }
   .ml-xl-n2,
   .mx-xl-n2 {
-    margin-left: -0.5rem !important;
+    margin-left: -0.5rem !'Cairo', sans-serif;
   }
   .m-xl-n3 {
-    margin: -1rem !important;
+    margin: -1rem !'Cairo', sans-serif;
   }
   .mt-xl-n3,
   .my-xl-n3 {
-    margin-top: -1rem !important;
+    margin-top: -1rem !'Cairo', sans-serif;
   }
   .mr-xl-n3,
   .mx-xl-n3 {
-    margin-right: -1rem !important;
+    margin-right: -1rem !'Cairo', sans-serif;
   }
   .mb-xl-n3,
   .my-xl-n3 {
-    margin-bottom: -1rem !important;
+    margin-bottom: -1rem !'Cairo', sans-serif;
   }
   .ml-xl-n3,
   .mx-xl-n3 {
-    margin-left: -1rem !important;
+    margin-left: -1rem !'Cairo', sans-serif;
   }
   .m-xl-n4 {
-    margin: -1.5rem !important;
+    margin: -1.5rem !'Cairo', sans-serif;
   }
   .mt-xl-n4,
   .my-xl-n4 {
-    margin-top: -1.5rem !important;
+    margin-top: -1.5rem !'Cairo', sans-serif;
   }
   .mr-xl-n4,
   .mx-xl-n4 {
-    margin-right: -1.5rem !important;
+    margin-right: -1.5rem !'Cairo', sans-serif;
   }
   .mb-xl-n4,
   .my-xl-n4 {
-    margin-bottom: -1.5rem !important;
+    margin-bottom: -1.5rem !'Cairo', sans-serif;
   }
   .ml-xl-n4,
   .mx-xl-n4 {
-    margin-left: -1.5rem !important;
+    margin-left: -1.5rem !'Cairo', sans-serif;
   }
   .m-xl-n5 {
-    margin: -3rem !important;
+    margin: -3rem !'Cairo', sans-serif;
   }
   .mt-xl-n5,
   .my-xl-n5 {
-    margin-top: -3rem !important;
+    margin-top: -3rem !'Cairo', sans-serif;
   }
   .mr-xl-n5,
   .mx-xl-n5 {
-    margin-right: -3rem !important;
+    margin-right: -3rem !'Cairo', sans-serif;
   }
   .mb-xl-n5,
   .my-xl-n5 {
-    margin-bottom: -3rem !important;
+    margin-bottom: -3rem !'Cairo', sans-serif;
   }
   .ml-xl-n5,
   .mx-xl-n5 {
-    margin-left: -3rem !important;
+    margin-left: -3rem !'Cairo', sans-serif;
   }
   .m-xl-auto {
-    margin: auto !important;
+    margin: auto !'Cairo', sans-serif;
   }
   .mt-xl-auto,
   .my-xl-auto {
-    margin-top: auto !important;
+    margin-top: auto !'Cairo', sans-serif;
   }
   .mr-xl-auto,
   .mx-xl-auto {
-    margin-right: auto !important;
+    margin-right: auto !'Cairo', sans-serif;
   }
   .mb-xl-auto,
   .my-xl-auto {
-    margin-bottom: auto !important;
+    margin-bottom: auto !'Cairo', sans-serif;
   }
   .ml-xl-auto,
   .mx-xl-auto {
-    margin-left: auto !important;
+    margin-left: auto !'Cairo', sans-serif;
   }
 }
 
@@ -11619,19 +11621,19 @@ button.bg-dark:focus {
 }
 
 .text-monospace {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !'Cairo', sans-serif;
 }
 
 .text-justify {
-  text-align: justify !important;
+  text-align: justify !'Cairo', sans-serif;
 }
 
 .text-wrap {
-  white-space: normal !important;
+  white-space: normal !'Cairo', sans-serif;
 }
 
 .text-nowrap {
-  white-space: nowrap !important;
+  white-space: nowrap !'Cairo', sans-serif;
 }
 
 .text-truncate {
@@ -11641,183 +11643,183 @@ button.bg-dark:focus {
 }
 
 .text-left {
-  text-align: left !important;
+  text-align: left !'Cairo', sans-serif;
 }
 
 .text-right {
-  text-align: right !important;
+  text-align: right !'Cairo', sans-serif;
 }
 
 .text-center {
-  text-align: center !important;
+  text-align: center !'Cairo', sans-serif;
 }
 
 @media (min-width: 576px) {
   .text-sm-left {
-    text-align: left !important;
+    text-align: left !'Cairo', sans-serif;
   }
   .text-sm-right {
-    text-align: right !important;
+    text-align: right !'Cairo', sans-serif;
   }
   .text-sm-center {
-    text-align: center !important;
+    text-align: center !'Cairo', sans-serif;
   }
 }
 
 @media (min-width: 768px) {
   .text-md-left {
-    text-align: left !important;
+    text-align: left !'Cairo', sans-serif;
   }
   .text-md-right {
-    text-align: right !important;
+    text-align: right !'Cairo', sans-serif;
   }
   .text-md-center {
-    text-align: center !important;
+    text-align: center !'Cairo', sans-serif;
   }
 }
 
 @media (min-width: 992px) {
   .text-lg-left {
-    text-align: left !important;
+    text-align: left !'Cairo', sans-serif;
   }
   .text-lg-right {
-    text-align: right !important;
+    text-align: right !'Cairo', sans-serif;
   }
   .text-lg-center {
-    text-align: center !important;
+    text-align: center !'Cairo', sans-serif;
   }
 }
 
 @media (min-width: 1200px) {
   .text-xl-left {
-    text-align: left !important;
+    text-align: left !'Cairo', sans-serif;
   }
   .text-xl-right {
-    text-align: right !important;
+    text-align: right !'Cairo', sans-serif;
   }
   .text-xl-center {
-    text-align: center !important;
+    text-align: center !'Cairo', sans-serif;
   }
 }
 
 .text-lowercase {
-  text-transform: lowercase !important;
+  text-transform: lowercase !'Cairo', sans-serif;
 }
 
 .text-uppercase {
-  text-transform: uppercase !important;
+  text-transform: uppercase !'Cairo', sans-serif;
 }
 
 .text-capitalize {
-  text-transform: capitalize !important;
+  text-transform: capitalize !'Cairo', sans-serif;
 }
 
 .font-weight-light {
-  font-weight: 300 !important;
+  font-weight: 300 !'Cairo', sans-serif;
 }
 
 .font-weight-lighter {
-  font-weight: lighter !important;
+  font-weight: lighter !'Cairo', sans-serif;
 }
 
 .font-weight-normal {
-  font-weight: 400 !important;
+  font-weight: 400 !'Cairo', sans-serif;
 }
 
 .font-weight-bold {
-  font-weight: 700 !important;
+  font-weight: 700 !'Cairo', sans-serif;
 }
 
 .font-weight-bolder {
-  font-weight: bolder !important;
+  font-weight: bolder !'Cairo', sans-serif;
 }
 
 .font-italic {
-  font-style: italic !important;
+  font-style: italic !'Cairo', sans-serif;
 }
 
 .text-white {
-  color: #fff !important;
+  color: #fff !'Cairo', sans-serif;
 }
 
 .text-primary {
-  color: #007bff !important;
+  color: #007bff !'Cairo', sans-serif;
 }
 
 a.text-primary:hover, a.text-primary:focus {
-  color: #0056b3 !important;
+  color: #0056b3 !'Cairo', sans-serif;
 }
 
 .text-secondary {
-  color: #6c757d !important;
+  color: #6c757d !'Cairo', sans-serif;
 }
 
 a.text-secondary:hover, a.text-secondary:focus {
-  color: #494f54 !important;
+  color: #494f54 !'Cairo', sans-serif;
 }
 
 .text-success {
-  color: #28a745 !important;
+  color: #28a745 !'Cairo', sans-serif;
 }
 
 a.text-success:hover, a.text-success:focus {
-  color: #19692c !important;
+  color: #19692c !'Cairo', sans-serif;
 }
 
 .text-info {
-  color: #17a2b8 !important;
+  color: #17a2b8 !'Cairo', sans-serif;
 }
 
 a.text-info:hover, a.text-info:focus {
-  color: #0f6674 !important;
+  color: #0f6674 !'Cairo', sans-serif;
 }
 
 .text-warning {
-  color: #ffc107 !important;
+  color: #ffc107 !'Cairo', sans-serif;
 }
 
 a.text-warning:hover, a.text-warning:focus {
-  color: #ba8b00 !important;
+  color: #ba8b00 !'Cairo', sans-serif;
 }
 
 .text-danger {
-  color: #dc3545 !important;
+  color: #dc3545 !'Cairo', sans-serif;
 }
 
 a.text-danger:hover, a.text-danger:focus {
-  color: #a71d2a !important;
+  color: #a71d2a !'Cairo', sans-serif;
 }
 
 .text-light {
-  color: #f8f9fa !important;
+  color: #f8f9fa !'Cairo', sans-serif;
 }
 
 a.text-light:hover, a.text-light:focus {
-  color: #cbd3da !important;
+  color: #cbd3da !'Cairo', sans-serif;
 }
 
 .text-dark {
-  color: #343a40 !important;
+  color: #343a40 !'Cairo', sans-serif;
 }
 
 a.text-dark:hover, a.text-dark:focus {
-  color: #121416 !important;
+  color: #121416 !'Cairo', sans-serif;
 }
 
 .text-body {
-  color: #212529 !important;
+  color: #212529 !'Cairo', sans-serif;
 }
 
 .text-muted {
-  color: #6c757d !important;
+  color: #6c757d !'Cairo', sans-serif;
 }
 
 .text-black-50 {
-  color: rgba(0, 0, 0, 0.5) !important;
+  color: rgba(0, 0, 0, 0.5) !'Cairo', sans-serif;
 }
 
 .text-white-50 {
-  color: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(255, 255, 255, 0.5) !'Cairo', sans-serif;
 }
 
 .text-hide {
@@ -11829,42 +11831,42 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .text-decoration-none {
-  text-decoration: none !important;
+  text-decoration: none !'Cairo', sans-serif;
 }
 
 .text-break {
-  word-break: break-word !important;
-  word-wrap: break-word !important;
+  word-break: break-word !'Cairo', sans-serif;
+  word-wrap: break-word !'Cairo', sans-serif;
 }
 
 .text-reset {
-  color: inherit !important;
+  color: inherit !'Cairo', sans-serif;
 }
 
 .visible {
-  visibility: visible !important;
+  visibility: visible !'Cairo', sans-serif;
 }
 
 .invisible {
-  visibility: hidden !important;
+  visibility: hidden !'Cairo', sans-serif;
 }
 
 @media print {
   *,
   *::before,
   *::after {
-    text-shadow: none !important;
-    -webkit-box-shadow: none !important;
-            box-shadow: none !important;
+    text-shadow: none !'Cairo', sans-serif;
+    -webkit-box-shadow: none !'Cairo', sans-serif;
+            box-shadow: none !'Cairo', sans-serif;
   }
   a:not(.btn) {
-    text-decoration: underline;
+    text-decoration: none;
   }
   abbr[title]::after {
     content: " (" attr(title) ")";
   }
   pre {
-    white-space: pre-wrap !important;
+    white-space: pre-wrap !'Cairo', sans-serif;
   }
   pre,
   blockquote {
@@ -11889,10 +11891,10 @@ a.text-dark:hover, a.text-dark:focus {
     size: a3;
   }
   body {
-    min-width: 992px !important;
+    min-width: 992px !'Cairo', sans-serif;
   }
   .container {
-    min-width: 992px !important;
+    min-width: 992px !'Cairo', sans-serif;
   }
   .navbar {
     display: none;
@@ -11901,15 +11903,15 @@ a.text-dark:hover, a.text-dark:focus {
     border: 1px solid #000;
   }
   .table {
-    border-collapse: collapse !important;
+    border-collapse: collapse !'Cairo', sans-serif;
   }
   .table td,
   .table th {
-    background-color: #fff !important;
+    background-color: #fff !'Cairo', sans-serif;
   }
   .table-bordered th,
   .table-bordered td {
-    border: 1px solid #dee2e6 !important;
+    border: 1px solid #dee2e6 !'Cairo', sans-serif;
   }
   .table-dark {
     color: inherit;
@@ -11935,7 +11937,7 @@ body {
 }
 
 #wrapper-hero {
-  padding: 0 !important;
+  padding: 0 !'Cairo', sans-serif;
 }
 
 .sticky,
@@ -12063,7 +12065,7 @@ a.skip-link:active, a.skip-link:focus {
   padding: 0.25rem 1.5rem;
   clear: both;
   font-weight: 400;
-  color: #212529 !important;
+  color: #212529 !'Cairo', sans-serif;
   text-align: inherit;
   white-space: nowrap;
   background: none;
@@ -12071,19 +12073,19 @@ a.skip-link:active, a.skip-link:focus {
 }
 
 .navbar-dark .navbar-nav .dropdown-menu .nav-link:hover, .navbar-dark .navbar-nav .dropdown-menu .nav-link:focus {
-  color: #16181b !important;
+  color: #16181b !'Cairo', sans-serif;
   text-decoration: none;
   background-color: #e9ecef;
 }
 
 .navbar-dark .navbar-nav .dropdown-menu .nav-link.active, .navbar-dark .navbar-nav .dropdown-menu .nav-link:active {
-  color: #fff !important;
+  color: #fff !'Cairo', sans-serif;
   text-decoration: none;
   background-color: #007bff;
 }
 
 .navbar-dark .navbar-nav .dropdown-menu .nav-link.disabled, .navbar-dark .navbar-nav .dropdown-menu .nav-link:disabled {
-  color: #adb5bd !important;
+  color: #adb5bd !'Cairo', sans-serif;
   background-color: transparent;
 }
 
@@ -12178,7 +12180,7 @@ a.skip-link:active, a.skip-link:focus {
 }
 
 .entry-content p a:not(.btn) {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /*
@@ -12196,7 +12198,7 @@ a.skip-link:active, a.skip-link:focus {
 */
 .wpcf7 {
   max-width: 600px;
-  margin: 0 auto !important;
+  margin: 0 auto !'Cairo', sans-serif;
 }
 
 .wpcf7 .wpcf7-form p {
@@ -13174,7 +13176,7 @@ a.skip-link:active, a.skip-link:focus {
   content: "";
 }
 
-.fa-underline:before {
+.fa-none:before {
   content: "";
 }
 
@@ -15266,14 +15268,14 @@ a.skip-link:active, a.skip-link:focus {
 }
 
 @font-face {
-  font-family: componentsFont;
+  font-family: 'Cairo', sans-serif;
   src: url(Tajawal-Regular.ttf);
 }
 
 * {
   margin: 0;
   padding: 0;
-  font-family: componentsFont, Arial;
+  font-family: 'Cairo', sans-serif;
   text-decoration: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -15285,12 +15287,12 @@ img {
 }
 
 a {
-  text-decoration: none !important;
-  transition: all 0.3s ease-in-out !important;
-  -webkit-transition: all 0.3s ease-in-out !important;
-  -moz-transition: all 0.3s ease-in-out !important;
-  -ms-transition: all 0.3s ease-in-out !important;
-  -o-transition: all 0.3s ease-in-out !important;
+  text-decoration: none !'Cairo', sans-serif;
+  transition: all 0.3s ease-in-out !'Cairo', sans-serif;
+  -webkit-transition: all 0.3s ease-in-out !'Cairo', sans-serif;
+  -moz-transition: all 0.3s ease-in-out !'Cairo', sans-serif;
+  -ms-transition: all 0.3s ease-in-out !'Cairo', sans-serif;
+  -o-transition: all 0.3s ease-in-out !'Cairo', sans-serif;
 }
 
 a:hover {
@@ -15314,7 +15316,7 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-family: componentsFont !important;
+  font-family: Cairo !'Cairo', sans-serif;
   font-weight: 600;
   line-height: 1.2;
 }
@@ -15342,19 +15344,19 @@ img {
 }
 
 .sticky {
-  position: fixed !important;
+  position: fixed !'Cairo', sans-serif;
   width: 100%;
   left: 0;
   top: 0;
   z-index: 100;
   border-top: 0;
-  background: white !important;
+  background: white !'Cairo', sans-serif;
 }
 
 .navbar-toggler {
   border: none;
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
+  -webkit-box-shadow: none !'Cairo', sans-serif;
+          box-shadow: none !'Cairo', sans-serif;
   margin: 0 7px;
 }
 
@@ -15367,31 +15369,31 @@ img {
 ::-webkit-scrollbar {
   width: 8px;
   height: 6px;
-  border-radius: 0px !important;
-  -webkit-border-radius: 0px !important;
-  -moz-border-radius: 0px !important;
-  -ms-border-radius: 0px !important;
-  -o-border-radius: 0px !important;
+  border-radius: 0px !'Cairo', sans-serif;
+  -webkit-border-radius: 0px !'Cairo', sans-serif;
+  -moz-border-radius: 0px !'Cairo', sans-serif;
+  -ms-border-radius: 0px !'Cairo', sans-serif;
+  -o-border-radius: 0px !'Cairo', sans-serif;
 }
 
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
           box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  border-radius: 0px !important;
-  -webkit-border-radius: 0px !important;
-  -moz-border-radius: 0px !important;
-  -ms-border-radius: 0px !important;
-  -o-border-radius: 0px !important;
+  border-radius: 0px !'Cairo', sans-serif;
+  -webkit-border-radius: 0px !'Cairo', sans-serif;
+  -moz-border-radius: 0px !'Cairo', sans-serif;
+  -ms-border-radius: 0px !'Cairo', sans-serif;
+  -o-border-radius: 0px !'Cairo', sans-serif;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: #5c9f24;
   outline: none;
-  border-radius: 20px !important;
-  -webkit-border-radius: 20px !important;
-  -moz-border-radius: 20px !important;
-  -ms-border-radius: 20px !important;
-  -o-border-radius: 20px !important;
+  border-radius: 20px !'Cairo', sans-serif;
+  -webkit-border-radius: 20px !'Cairo', sans-serif;
+  -moz-border-radius: 20px !'Cairo', sans-serif;
+  -ms-border-radius: 20px !'Cairo', sans-serif;
+  -o-border-radius: 20px !'Cairo', sans-serif;
 }
 
 .wrapper {
@@ -15526,15 +15528,15 @@ img {
 }
 
 .mainNav .container {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  -webkit-box-pack: justify !important;
-      -ms-flex-pack: justify !important;
-          justify-content: space-between !important;
-  -webkit-box-align: center !important;
-      -ms-flex-align: center !important;
-          align-items: center !important;
+  display: -webkit-box !'Cairo', sans-serif;
+  display: -ms-flexbox !'Cairo', sans-serif;
+  display: flex !'Cairo', sans-serif;
+  -webkit-box-pack: justify !'Cairo', sans-serif;
+      -ms-flex-pack: justify !'Cairo', sans-serif;
+          justify-content: space-between !'Cairo', sans-serif;
+  -webkit-box-align: center !'Cairo', sans-serif;
+      -ms-flex-align: center !'Cairo', sans-serif;
+          align-items: center !'Cairo', sans-serif;
 }
 
 .mainNav .navbar-brand {
@@ -15620,12 +15622,12 @@ img {
 }
 
 .mainNav .dropdown .dropdown-toggle::after {
-  border: none !important;
-  content: "\f104" !important;
+  border: none !'Cairo', sans-serif;
+  content: "\f104" !'Cairo', sans-serif;
   font-family: "Font Awesome 6 Pro";
   transition: all 0.3s ease-in-out;
   margin-right: 5px;
-  width: 10px !important;
+  width: 10px !'Cairo', sans-serif;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
@@ -15645,8 +15647,8 @@ img {
   animation-duration: 0.5s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  -webkit-animation-name: fadeOutDown !important;
-  animation-name: fadeOutDown !important;
+  -webkit-animation-name: fadeOutDown !'Cairo', sans-serif;
+  animation-name: fadeOutDown !'Cairo', sans-serif;
   -webkit-animation-delay: 0s;
   animation-delay: 0s;
   background-color: #ffffff;
@@ -15685,7 +15687,7 @@ img {
 }
 
 .mainNav .nav-btns a {
-  font-family: componentsFont;
+  font-family: 'Cairo', sans-serif;
   padding: 10px;
   width: 150px;
   font-weight: 500;
@@ -15714,8 +15716,8 @@ img {
   animation-duration: 0.5s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  -webkit-animation-name: fadeInUp !important;
-  animation-name: fadeInUp !important;
+  -webkit-animation-name: fadeInUp !'Cairo', sans-serif;
+  animation-name: fadeInUp !'Cairo', sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -15726,8 +15728,8 @@ img {
 
 @media (max-width: 768px) {
   .mainNav .dropdown .dropdown-menu {
-    -webkit-animation-name: unset !important;
-    animation-name: unset !important;
+    -webkit-animation-name: unset !'Cairo', sans-serif;
+    animation-name: unset !'Cairo', sans-serif;
     -webkit-box-shadow: none;
             box-shadow: none;
     text-align: center;
@@ -15735,8 +15737,8 @@ img {
     margin: 10px 0;
   }
   .mainNav .dropdown:hover .dropdown-menu {
-    -webkit-animation-name: unset !important;
-    animation-name: unset !important;
+    -webkit-animation-name: unset !'Cairo', sans-serif;
+    animation-name: unset !'Cairo', sans-serif;
   }
 }
 
@@ -15754,11 +15756,11 @@ img {
 }
 
 .slide {
-  width: 100% !important;
-  height: 100% !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  background-size: cover !important;
+  width: 100% !'Cairo', sans-serif;
+  height: 100% !'Cairo', sans-serif;
+  background-repeat: no-repeat !'Cairo', sans-serif;
+  background-position: center !'Cairo', sans-serif;
+  background-size: cover !'Cairo', sans-serif;
 }
 
 .slide1 {
@@ -15788,7 +15790,7 @@ img {
 }
 
 .main-swiper .swiper-pagination-bullet-active {
-  background: #5c9f24 !important;
+  background: #5c9f24 !'Cairo', sans-serif;
   transform: scale(200%);
   -webkit-transform: scale(200%);
   -moz-transform: scale(200%);
@@ -15835,7 +15837,7 @@ img {
   font-size: 28px;
   margin: 10px auto;
   font-weight: bold;
-  font-family: componentsFont;
+  font-family: 'Cairo', sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -16562,7 +16564,7 @@ section {
 
 @media (max-width: 768px) {
   .breadcrumbs .d-flex {
-    display: block !important;
+    display: block !'Cairo', sans-serif;
   }
   .breadcrumbs ol {
     display: block;
@@ -16627,14 +16629,14 @@ section {
 }
 
 .recent-articles article .category-btn {
-  border-color: #5c9f24 !important;
-  border-radius: 25px 0 0 25px !important;
-  border-width: 2px !important;
-  padding: 5px !important;
-  -webkit-border-radius: 25px 0 0 25px !important;
-  -moz-border-radius: 25px 0 0 25px !important;
-  -ms-border-radius: 25px 0 0 25px !important;
-  -o-border-radius: 25px 0 0 25px !important;
+  border-color: #5c9f24 !'Cairo', sans-serif;
+  border-radius: 25px 0 0 25px !'Cairo', sans-serif;
+  border-width: 2px !'Cairo', sans-serif;
+  padding: 5px !'Cairo', sans-serif;
+  -webkit-border-radius: 25px 0 0 25px !'Cairo', sans-serif;
+  -moz-border-radius: 25px 0 0 25px !'Cairo', sans-serif;
+  -ms-border-radius: 25px 0 0 25px !'Cairo', sans-serif;
+  -o-border-radius: 25px 0 0 25px !'Cairo', sans-serif;
 }
 
 .recent-articles article .category-btn a {
@@ -16787,7 +16789,7 @@ section {
 
 #archive-wrapper article .cat-links a {
   border: 1px solid #5c9f24;
-  padding: 5px !important;
+  padding: 5px !'Cairo', sans-serif;
   border-radius: 10px;
   color: #5c9f24;
   -webkit-border-radius: 10px;
@@ -16974,8 +16976,8 @@ section {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  color: #F20732 !important;
-  background-color: #fff !important;
+  color: #F20732 !'Cairo', sans-serif;
+  background-color: #fff !'Cairo', sans-serif;
   border-radius: 50%;
   width: 30px;
   height: 30px;
@@ -17000,7 +17002,7 @@ section {
 
 .socials i:hover {
   transform: rotate(360deg);
-  color: #fff !important;
+  color: #fff !'Cairo', sans-serif;
   -webkit-transform: rotate(360deg);
   -moz-transform: rotate(360deg);
   -ms-transform: rotate(360deg);
@@ -17008,27 +17010,27 @@ section {
 }
 
 .socials .fa-facebook-f:hover {
-  background-color: #4267B2 !important;
+  background-color: #4267B2 !'Cairo', sans-serif;
 }
 
 .socials .fa-twitter:hover {
-  background-color: #00acee !important;
+  background-color: #00acee !'Cairo', sans-serif;
 }
 
 .socials .fa-instagram:hover {
-  background-color: #A2379C !important;
+  background-color: #A2379C !'Cairo', sans-serif;
 }
 
 .socials .fa-youtube:hover {
-  background-color: #ff0000 !important;
+  background-color: #ff0000 !'Cairo', sans-serif;
 }
 
 .socials .fa-google:hover {
-  background-color: #ea4335 !important;
+  background-color: #ea4335 !'Cairo', sans-serif;
 }
 
 .socials .fa-linkedin-in:hover {
-  background-color: #0077B5 !important;
+  background-color: #0077B5 !'Cairo', sans-serif;
 }
 
 .copyrights {
@@ -17491,10 +17493,10 @@ section {
 }
 
 .accordion-button::after {
-  margin-right: 0 !important;
+  margin-right: 0 !'Cairo', sans-serif;
 }
 
 .accordion-button::before {
-  margin-left: 0 !important;
+  margin-left: 0 !'Cairo', sans-serif;
 }
 /*# sourceMappingURL=theme-bootstrap4.css.map */
